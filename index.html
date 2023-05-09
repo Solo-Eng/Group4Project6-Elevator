@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial;}
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #a8a7a7;
+  background-color: #dadada;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 10px 10px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #01610e80;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #a8a7a7;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #a8a7a7;
+  border-top: none;
+}
+</style>
+</head>
+<body>
+
+<h2>Tabs</h2>
+<p>Click on the buttons inside the tabbed menu:</p>
+
+<div class="tab">
+  <button class="tablinks" onclick="openTab(event, 'ElevatorUI')">ElevatorUI</button>
+  <button class="tablinks" onclick="openTab(event, 'Logbooks')">Logbooks</button>
+</div>
+
+<div id="ElevatorUI" class="tabcontent">
+  <h3>Elevator UI</h3>
+</div>
+
+<div id="Logbooks" class="tabcontent">
+  <h3>Logbooks</h3>
+  <a href="https://stuconestogacon-my.sharepoint.com/:w:/g/personal/lcain0493_conestogac_on_ca/EfoZmEZ_LhpMuSWJGw9uVZoBhttps://stuconestogacon-my.sharepoint.com/:w:/g/personal/lcain0493_conestogac_on_ca/EfoZmEZ_LhpMuSWJGw9uVZoBmuhZpd51ByOUfQK8yU8Kqg?e=J2GTcv">Liam's Logbook</a>
+</div>
+
+<script>
+function openTab(evt, tabName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(tabName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
+   
+</body>
+</html> 
