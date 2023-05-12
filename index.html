@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial;}
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #a8a7a7;
+  background-color: #dadada;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 10px 10px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #01610e80;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #a8a7a7;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #a8a7a7;
+  border-top: none;
+}
+</style>
+</head>
+<body>
+  
+<div class="tab">
+  <button class="tablinks" onclick="openTab(event, 'Elevator UI')">Elevator UI</button>
+  <button class="tablinks" onclick="openTab(event, 'Documents')">Documents</button>
+  <button class="tablinks" onclick="openTab(event, 'About Us')">About Us</button>
+</div>
+
+<div id="Elevator UI" class="tabcontent">
+  <h3>Elevator UI</h3>
+  <p>Please pick your floor:</p>
+  <input type="radio" id="floor1" name="floor" value="1">
+  <label for="floor1">Floor 1</label><br>
+  <input type="radio" id="floor2" name="floor" value="2">
+  <label for="floor2">Floor 2</label><br>  
+  <input type="radio" id="floor3" name="floor" value="3">
+  <label for="floor3">Floor 3</label><br><br>
+  <input type="Submit" value="Submit">
+</div>
+
+<div id="Documents" class="tabcontent">
+  <h3>Logbooks</h3>
+  <a href="https://stuconestogacon-my.sharepoint.com/:w:/g/personal/ballen3456_conestogac_on_ca/EZW7zbX46k5Kq5pzyC2WdKcBC_hhOpPJkXihf01Hk-Vzew?e=GaKf53">Ben's Logbook</a>
+  <br>
+  <a href="https://docs.google.com/document/d/1qnx6sfJgxFIYw-_kfCeWGduqOD-Heg1EdHB79scrmRY/edit">Nick's Logbook</a>
+  <br>
+  <a href="https://stuconestogacon-my.sharepoint.com/:w:/g/personal/lcain0493_conestogac_on_ca/EfoZmEZ_LhpMuSWJGw9uVZoBmuhZpd51ByOUfQK8yU8Kqg?e=yHE7Ny">Liam's Logbook</a>
+  <br>
+  <a href="https://stuconestogacon-my.sharepoint.com/:w:/g/personal/gmatharu3942_conestogac_on_ca/EVEUbBaJyb9Ig98-idhhmmABFKdheUz8nTMV625heylnYA?e=h3w2PR">Guneet's Logbook</a>
+  <br>
+  <h3>Other Documents</h3>
+  <a href="https://stuconestogacon-my.sharepoint.com/:x:/g/personal/ballen3456_conestogac_on_ca/EVfdUrfEeJxOrQO_9qBdUuwB5-PgGanMExcuPJbTJC1ohQ?e=pp3sKi">Project Plan</a>
+  <br>
+  <div class="container">
+    <iframe src="https://docs.google.com/document/d/1cfRmLhmXDjhspQ5UXAmR95JGnCpSuWcTc-4THrkA7O4/edit?usp=sharing" 
+    width="100%" height="600px" frameborder="0">
+    </iframe>
+    <iframe src="https://docs.google.com/document/d/1W-DSqU03_xCafG9fKRGVlEFYu-g7KnLhtpKuCbsAxyc/edit?usp=sharing" 
+    width="100%" height="600px" frameborder="0">
+    </iframe>
+    <iframe src="https://docs.google.com/document/d/1kqjQcx8HJ8r7InfXPe9E1nR29IjtsAT9J92CpzLCF_4/edit?usp=sharing" 
+    width="100%" height="600px" frameborder="0">
+    <iframe src="https://docs.google.com/document/d/1qnx6sfJgxFIYw-_kfCeWGduqOD-Heg1EdHB79scrmRY/edit" 
+    width="100%" height="600px" frameborder="0">
+    </iframe>
+  </div>
+  
+  <br>
+</div>
+
+<div id="About Us" class="tabcontent">
+  <h3>About Us</h3>
+  
+  <p>Our team is composed of four people:</p>
+  <br/>
+  <h3><u>Nick</u><h3>
+	<p>Hello, I'm Nickolas! Third year ESE @ Conestoga College. </p>
+    <br/>
+  <h3><u>Liam</u><h3>
+	<p>Hello, I'm Liam! Third year ESE @ Conestoga College. </p>
+    <br/>
+  <h3><u>Guneet</u><h3>
+	<p>Hello, I'm Guneet! Third year ESE @ Conestoga College. </p>
+    <br/>
+  <h3><u>Ben</u><h3>
+	<p>Hello, I'm Ben! Third year ESE @ Conestoga College. </p>
+  <img src="bendotjpeg.jpg" alt="BenImage" title="Ben Allen" height="100" width="100"/>
+</div>
+
+<script>
+function openTab(evt, tabName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(tabName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
+   
+</body>
+</html> 
