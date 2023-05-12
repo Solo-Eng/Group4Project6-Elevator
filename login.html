@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title> Login Page </title>
+<style>
+body {font-family: Arial;}
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #a8a7a7;
+  background-color: #dadada;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 10px 10px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #01610e80;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #a8a7a7;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #a8a7a7;
+  border-top: none;
+}
+</style>
+</head>
+<body>
+
+<div>
+  <form action="login.php" method="post" id="login">
+    <h3>Login</h3>
+	<p>Username:
+		<input type="text" name="username" />
+	</p>
+	<p>Password:
+		<input type="password" name="password" />
+	</p>
+	<input type="submit" value="Login" />
+	<p><a href="index.html">Circumvent</a></p>
+	
+</div>
+
+<script>
+
+</script>
+   
+</body>
+</html> 
