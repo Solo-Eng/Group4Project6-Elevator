@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 body {font-family: Arial;}
 
@@ -46,6 +46,8 @@ body {font-family: Arial;}
 <body>
   
 <div class="tab">
+  <button class="tablinks" onclick="openTab(event, 'Elevator UI')">Elevator UI</button>
+  <button class="tablinks" onclick="openTab(event, 'Documents')">Documents</button>
   <button class="tablinks" onclick="openTab(event, 'About Us')">About Us</button>
 </div>
 
@@ -105,17 +107,15 @@ width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" ref
 
 <script>
 function openTab(evt, tabName) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
+  if(tabName == 'Elevator UI'){
+    window.location = "index.html";
   }
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  else if(tabName == 'Documents') {
+    window.location = "documents.html";
   }
-  document.getElementById(tabName).style.display = "block";
-  evt.currentTarget.className += " active";
+  else if(tabName == 'About Us') {
+    window.location = "about.html";
+  }
 }
 </script>
    

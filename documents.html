@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial;}
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #a8a7a7;
+  background-color: #dadada;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 10px 10px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #01610e80;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #a8a7a7;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #a8a7a7;
+  border-top: none;
+}
+</style>
+</head>
+<body>
+  
+<div class="tab">
+  <button class="tablinks" onclick="openTab(event, 'Elevator UI')">Elevator UI</button>
+  <button class="tablinks" onclick="openTab(event, 'Documents')">Documents</button>
+  <button class="tablinks" onclick="openTab(event, 'About Us')">About Us</button>
+</div>
+
+<div>
+    <h3>Logbooks</h3>
+    <br>
+    <div class="container">
+      <h4>Guneet's Logbook</h4>
+      <iframe src="https://docs.google.com/document/d/1cfRmLhmXDjhspQ5UXAmR95JGnCpSuWcTc-4THrkA7O4/edit?usp=sharing" 
+      width="90%" height="800px" frameborder="0" style="padding-left: 5%; padding-bottom: 70px; padding-right: 5%;">
+      </iframe>
+    </div>
+    <div class="container">
+      <h4>Liam's Logbook</h4>
+      <iframe src="https://docs.google.com/document/d/1W-DSqU03_xCafG9fKRGVlEFYu-g7KnLhtpKuCbsAxyc/edit?usp=sharing" 
+      width="90%" height="800px" frameborder="0" style="padding-left: 5%; padding-bottom: 70px; padding-right: 5%;">
+      </iframe>
+    </div>
+    <div class="container">
+      <h4>Ben's Logbook</h4>
+      <iframe src="https://docs.google.com/document/d/1kqjQcx8HJ8r7InfXPe9E1nR29IjtsAT9J92CpzLCF_4/edit?usp=sharing" 
+      width="90%" height="800px" frameborder="0" style="padding-left: 5%; padding-bottom: 70px; padding-right: 5%;">
+      </iframe>
+    </div>
+    <div class="container">
+      <h4>Nick's Logbook</h4>
+      <iframe src="https://docs.google.com/document/d/1qnx6sfJgxFIYw-_kfCeWGduqOD-Heg1EdHB79scrmRY/edit?usp=sharing" 
+      width="90%" height="800px" frameborder="0" style="padding-left: 5%; padding-bottom: 70px; padding-right: 5%;">
+      </iframe>
+    </div>
+    <br>
+    <h3>Other Documents</h3>
+    <h4>Project Plan</h4>
+    <iframe src="https://docs.google.com/spreadsheets/d/1HwsJe2DO0avb6E7rf_N8El0u6x7BlTmB/edit?usp=sharing&ouid=101743572725598492549&rtpof=true&sd=true" 
+    width="90%" height="800px" frameborder="0" style="padding-left: 5%; padding-bottom: 70px; padding-right: 5%;">
+    </iframe>
+  </div>
+
+  <script>
+    function openTab(evt, tabName) {
+        if(tabName == 'Elevator UI'){
+        window.location = "index.html";
+        }
+        else if(tabName == 'Documents') {
+        window.location = "applications.html";
+        }
+        else if(tabName == 'About Us') {
+        window.location = "about.html";
+        }
+    }
+    </script>
+   
+</body>
+</html> 
