@@ -3,6 +3,7 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
+/* Until "END COMMON" common amongst all tabs on top*/
 body {font-family: Arial;}
 
 /* Style the tab */
@@ -41,84 +42,62 @@ body {font-family: Arial;}
   border: 1px solid #a8a7a7;
   border-top: none;
 }
+/* END COMMON */
 </style>
 </head>
 <body>
-  
+<!-- Until "END COMMON" common amongst all tabs on top-->
+<!-- This is for the tabs at the top of the page-->
 <div class="tab">
-  <button class="tablinks" onclick="openTab(event, 'Elevator UI')">Elevator UI</button>
-  <button class="tablinks" onclick="openTab(event, 'Documents')">Documents</button>
-  <button class="tablinks" onclick="openTab(event, 'About Us')"><a href="about.html">About Us</a></button>
+  <!--  
+    Given an onclick event, this will redirect to the Javascript
+    potion where the tab will redirect to another page
+  -->
+  <button onclick="openTab(event, 'Elevator UI')">Elevator UI</button>
+  <button onclick="openTab(event, 'Documents')">Documents</button>
+  <button onclick="openTab(event, 'About Us')">About Us</button>
 </div>
+<!-- END COMMON-->
 
-<div id="About Us" class="tabcontent">
-  
-</div>
-
-<div id="Elevator UI" class="tabcontent">
+<div>
+  <!-- The UI for the elevator-->
   <h3>Elevator UI</h3>
   <p>Please pick your floor:</p>
+  <!-- Designated type, ID, name, and value for each button-->
   <input type="radio" id="floor1" name="floor" value="1">
   <label for="floor1">Floor 1</label><br>
   <input type="radio" id="floor2" name="floor" value="2">
   <label for="floor2">Floor 2</label><br>  
   <input type="radio" id="floor3" name="floor" value="3">
   <label for="floor3">Floor 3</label><br><br>
+  <!-- 
+    Submit will send the data to the database and
+    control the elevator.
+  -->
   <input type="Submit" value="Submit">
   <br/>
   <p>Wanna know about the developers? <a href="about.html">Click here</a></p><br/>
   <a href="login.html">Login as security</a>
 </div>
 
-<div id="Documents" class="tabcontent">
-  <h3>Logbooks</h3>
-  <br>
-  <div class="container">
-    <h4>Guneet's Logbook</h4>
-    <iframe src="https://docs.google.com/document/d/1cfRmLhmXDjhspQ5UXAmR95JGnCpSuWcTc-4THrkA7O4/edit?usp=sharing" 
-    width="90%" height="800px" frameborder="0" style="padding-left: 5%; padding-bottom: 70px; padding-right: 5%;">
-    </iframe>
-  </div>
-  <div class="container">
-    <h4>Liam's Logbook</h4>
-    <iframe src="https://docs.google.com/document/d/1W-DSqU03_xCafG9fKRGVlEFYu-g7KnLhtpKuCbsAxyc/edit?usp=sharing" 
-    width="90%" height="800px" frameborder="0" style="padding-left: 5%; padding-bottom: 70px; padding-right: 5%;">
-    </iframe>
-  </div>
-  <div class="container">
-    <h4>Ben's Logbook</h4>
-    <iframe src="https://docs.google.com/document/d/1kqjQcx8HJ8r7InfXPe9E1nR29IjtsAT9J92CpzLCF_4/edit?usp=sharing" 
-    width="90%" height="800px" frameborder="0" style="padding-left: 5%; padding-bottom: 70px; padding-right: 5%;">
-    </iframe>
-  </div>
-  <div class="container">
-    <h4>Nick's Logbook</h4>
-    <iframe src="https://docs.google.com/document/d/1qnx6sfJgxFIYw-_kfCeWGduqOD-Heg1EdHB79scrmRY/edit?usp=sharing" 
-    width="90%" height="800px" frameborder="0" style="padding-left: 5%; padding-bottom: 70px; padding-right: 5%;">
-    </iframe>
-  </div>
-  <br>
-  <h3>Other Documents</h3>
-  <h4>Project Plan</h4>
-  <iframe src="https://docs.google.com/spreadsheets/d/1HwsJe2DO0avb6E7rf_N8El0u6x7BlTmB/edit?usp=sharing&ouid=101743572725598492549&rtpof=true&sd=true" 
-  width="90%" height="800px" frameborder="0" style="padding-left: 5%; padding-bottom: 70px; padding-right: 5%;">
-  </iframe>
-</div>
+
 
 <script>
+//Until "END COMMON" common amongst all tabs on top
+//fucntion for opening the tab
 function openTab(evt, tabName) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
+  if(tabName == 'Elevator UI'){
+    //redirects to another file
+    window.location = "index.html";
   }
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  else if(tabName == 'Documents') {
+    window.location = "documents.html";
   }
-  document.getElementById(tabName).style.display = "block";
-  evt.currentTarget.className += " active";
+  else if(tabName == 'About Us') {
+    window.location = "about.html";
+  }
 }
+//END COMMON
 </script>
    
 </body>
