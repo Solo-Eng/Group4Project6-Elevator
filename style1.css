@@ -98,24 +98,36 @@ body {font-family: Arial;}
   100%{transform: rotate(360deg); }
 }
 
-.DownArrow{
+#DownArrow input[type="checkbox"]{
+  content:url(arrow-down-square.svg);
   height:100px; 
   width:100px;
-  fill:currentColor;
+  appearance:none;
+  display:block;
   margin-left: 40%;
 }
 
-.DownArrow:hover{
+#DownArrow input[type="checkbox"]:hover{
   content:url(arrow-down-square-fill.svg);
 }
 
-.UpArrow{
+#DownArrow input[type="checkbox"]:checked{
+  content:url(arrow-down-green.png);
+}
+
+#UpArrow input[type="checkbox"]{
   height:100px; 
   width:100px;
-  fill:currentColor;
+  appearance:none;
+  display:block;
+  content:url(arrow-up-square.svg);
   margin-left: 40%;
 }
 
-.UpArrow:hover{
+#UpArrow input[type="checkbox"]:hover{
   content:url(arrow-up-square-fill.svg);
+}
+
+#UpArrow input[type="checkbox"]:checked{
+  content:url(arrow-up-green.png);
 }
