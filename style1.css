@@ -162,3 +162,33 @@ body {font-family: Arial;}
 #UpArrow input[type="checkbox"]:checked{
   content:url(arrow-up-green.png);
 }
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto;
+  padding: 10px;
+}
+.grid-item {
+  padding: 30px;
+  font-size: 30px;
+  text-align: center;
+  background-color: rgb(59, 59, 59);
+}
+.grid-item.elevatorDoor {
+  background-color: rgb(99, 99, 99);
+}
+.grid-item.elevatorDoor.top{
+  border-top: 3px solid rgb(0,0,0);
+}
+.grid-item.elevatorDoor.outer.left{
+  border-left: 3px solid rgb(0,0,0);
+}
+.grid-item.elevatorDoor.outer.right {
+  border-right: 3px solid rgb(0,0,0);
+}
+.grid-item.elevatorDoor.inner.left {
+  border-right: 3px solid rgb(0,0,0);
+}
+.grid-item.elevatorDoor.inner.right {
+  border-left: 3px solid rgb(0,0,0);
+}
