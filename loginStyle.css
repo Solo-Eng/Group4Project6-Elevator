@@ -9,7 +9,29 @@
     width: 150px;
     text-align: left;
     padding: 0px 0px 0px 0px;
+    background-color: #3498db;
+    color: white;
 }
 div { padding: 10px 0px 10px 0px;
     width: 274px;
+  }
+
+input[type="Submit"]{
+    width: 110px;
+    padding: 3px 3px 3px 3px;
+    margin-left: 40%;
+    background-color: #3498db;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
+
+  #test button[type="button"]{
+    content:url(check.svg);
+    height:100px; 
+    width:100px;
+    appearance:none;
+    display:block;
+    margin-left: 40%;
   }
