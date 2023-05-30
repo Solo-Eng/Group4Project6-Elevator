@@ -1,17 +1,18 @@
 // Just random for now
 
 let x = Math.floor((Math.random() * 3) + 1);
+let floorIcon = document.getElementById('FloorNum');
 
 if ( x == 1){
-    var msg = '<div class="container" id="Circle1"> <img type="floorIndicator"></img> </div>';
+   floorIcon.id='Circle1';
 }
 if ( x == 2){
-    var msg = '<div class="container" id="Circle2"> <img type="floorIndicator"></img> </div>';
+    floorIcon.id='Circle2';
 }
 if ( x == 3){
-    var msg = '<div class="container" id="Circle3"> <img type="floorIndicator"></img> </div>';
+    floorIcon.id='Circle3';
 }
 
 
-var elemt = document.getElementById('image');
-elemt.innerHTML = msg;    
+
+
