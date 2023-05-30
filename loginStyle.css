@@ -1,27 +1,49 @@
 /* Style the text fields */
 .text_label{
-    float: left;
-    width: 100px;
-    text-align: right;
-    padding: 0px 10px 10px 0px;
+  float: left;
+  width: 100px;
+  text-align: right;
+  padding: 0px 10px 10px 0px;
 }
 .text_input{
-    width: 150px;
-    text-align: left;
-    padding: 0px 0px 0px 0px;
-    color: white;
+  width: 150px;
+  text-align: left;
+  padding: 0px 0px 0px 0px;
+  color: black;
 }
 div { padding: 10px 0px 10px 0px;
-    width: 274px;
-  }
+  width: 274px;
+}
 
 input[type="Submit"]{
-    width: 115px;
-    padding: 3px 3px 3px 3px;
-    margin-left: 45%;
-    background-color: #3498db;
-    border-radius: 5px;
-    border: none;
-    color: white;
-    cursor: pointer;
-  }
+  width: 115px;
+  padding: 3px 3px 3px 3px;
+  margin-left: 45%;
+  background-color: #3498db;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+input[type="Submit"]:hover{
+  width: 115px;
+  padding: 3px 3px 3px 3px;
+  margin-left: 45%;
+  background-color: #3498ff;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+input[type="Submit"]:active{
+  width: 115px;
+  padding: 3px 3px 3px 3px;
+  margin-left: 45%;
+  background-color: #082C4C;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  cursor: pointer;
+}

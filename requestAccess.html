@@ -7,45 +7,48 @@
         <meta http-equiv="author" content="Ben Allen, Liam Cain, Guneet Matharu, Nickolas Raghunath" />
         <meta http-equiv="pragma" content="no-cache" />
 		<link rel="icon" type="image/x-icon" href="Spheal.ico">
+        <link rel="stylesheet" type="text/css" href="style1.css">
 		<link href="loginStyle.css" type="text/css" rel="stylesheet" />
 		<script type="text/javascript" src="script1.js"></script>
 	</head>
 <body>
-    <div>
-    <form action="requestAccess.php" method="post">
+
+<div>
+    <form action="requestAccess.php" method="post" id="requestAccess">
         <h3>Request Access</h3>
         <div>
             <label for="fname" class="text_label">First Name:</label>
-            <input id="text" type="text" class="text_input" name="fname" placeholder="First Name...">
+            <input id="fname" type="text" class="text_input" name="fname" placeholder="First Name...">
         </div>
         
         <div>
             <label for="lname" class="text_label">Last Name:</label>
-            <input id="text" type="text" class="text_input" name="lname" placeholder="Last Name...">
+            <input id="lname" type="text" class="text_input" name="lname" placeholder="Last Name...">
         </div>
 
         <div>
             <label for="email" class="text_label">Email:</label>
-            <input id="text" type="text" class="text_input" name="email" placeholder="Email...">
+            <input id="email" type="text" class="text_input" name="email" placeholder="Email...">
         </div>
 
         <div>
             <label for="uname" class="text_label">Username:</label>
-            <input id="text" type="text" class="text_input" name="uname" placeholder="Username...">
+            <input id="uname" type="text" class="text_input" name="uname" placeholder="Username...">
         </div>
 
         <div>
             <label for="pword" class="text_label">Password:</label>
-            <input id="text" type="password" class="text_input" name="pword" placeholder="Password...">  
+            <input id="pword" type="password" class="text_input" name="pword" placeholder="Password...">  
         </div>
         
         <div> 
             <input type="Submit" value="Submit Request">
         </div>
 
-        <p><a href="login.html">Circumvent</a></p>
+        
     </form>
 
+    <p><a href="login.html">Circumvent</a></p>
     <p>Copyright &copy Ben Allen, Liam Cain, Guneet Matharu, Nickolas Raghunath</p>
 
 </div>
