@@ -10,8 +10,10 @@ ft.innerHTML = '<p>Copyright &copy ' + year + ' Ben Allen, Liam Cain, Guneet Mat
 
 var currentMonth = today.toLocaleString('default', { month: 'long' });
 var currentDay = today.getDate();
+var currentHour = today.getHours();
+var currentMinute = today.getMinutes();
 var date = document.getElementById('time');
-date.innerHTML = '<h3>Welcome! Today is ' + currentMonth + ' ' + currentDay + ', ' + year + '</h3>';
+date.innerHTML = '<h3>' + currentHour + ':' + currentMinute + ' ' + currentMonth + ' ' + currentDay + ', ' + year + '</h3>';
 
 // Ben birthday:
 var BenBday = new Date('January 17, 2002');
