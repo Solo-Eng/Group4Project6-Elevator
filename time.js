@@ -45,11 +45,12 @@ var elemt = document.getElementById('guneetBirthday');
 elemt.innerHTML = msg;
 
 // Nick birthday:
-var NickBday = new Date('January 17, 2002');
+var NickBday = new Date('September 19, 1999');
 var NickAge = today.getTime() - NickBday.getTime();
 NickAge = Math.floor(NickAge / 31556900000);
 
-msg = '<b>Ben: </b> Hello, I\'m Nick! I am ' + NickAge + ' years old. I...';
+msg = '<b>Nick: </b> Hello, I\'m Nick! I am ' + NickAge + ' years old. I will be working on the indicators, logging CAN communications, '
+		+'producing diagnostic reports, speaker announcements and potentially voice commands through machine learning';
 var elemt = document.getElementById('nickBirthday');
 elemt.innerHTML = msg;
 
