@@ -27,11 +27,12 @@ var elemt = document.getElementById('benBirthday');
 elemt.innerHTML = msg;
 
 // Liam birthday:
-var LiamBday = new Date('January 17, 2002');
+var LiamBday = new Date('November 23, 2000');
 var LiamAge = today.getTime() - LiamBday.getTime();
 LiamAge = Math.floor(LiamAge / 31556900000);
 
-msg = '<b>Liam: </b> Hello, I\'m Liam! I am ' + LiamAge + ' years old. I...';
+msg = '<b>Liam: </b> Hello, I\'m Liam! I am ' + LiamAge + ' years old. I will mostly be working on the function of the elevator and connecting it to the website.'
+        +'I also hope to work more on the website itself because I think it is fun to work on and explore';
 var elemt = document.getElementById('liamBirthday');
 elemt.innerHTML = msg;
 
