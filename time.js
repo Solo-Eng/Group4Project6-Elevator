@@ -36,11 +36,13 @@ var elemt = document.getElementById('liamBirthday');
 elemt.innerHTML = msg;
 
 // Guneet birthday:
-var guneetBday = new Date('January 17, 2002');
+var guneetBday = new Date('December 22, 2001');
 var guneetAge = today.getTime() - guneetBday.getTime();
 guneetAge = Math.floor(guneetAge / 31556900000);
 
-msg = '<b>Ben: </b> Hello, I\'m Guneet! I am ' + guneetAge + ' years old. I...';
+msg = '<b>Guneet: </b> Hello, I\'m Guneet! I am ' + guneetAge + ' years old. I will be focusing on the front end UI of the website as well as'
++' some of the back end linking to the elevator. I will also be helping Ben with wiring the STMs and switches on the elevator system.'
++'<br>I enjoy playing video games and watching anime when I\'m not working on the elevator project.';
 var elemt = document.getElementById('guneetBirthday');
 elemt.innerHTML = msg;
 
