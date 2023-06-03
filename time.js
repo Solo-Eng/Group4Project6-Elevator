@@ -1,6 +1,7 @@
 var today = new Date();
 var year = today.getFullYear();
 
+
 if(document.getElementById('footLogBs')){
         var ftLBS = document.getElementById('footLogBs');
         ftLBS.innerHTML = '<p>Copyright &copy ' + year + ' Ben Allen, Liam Cain, Guneet Matharu, Nickolas Raghunath</p>';
