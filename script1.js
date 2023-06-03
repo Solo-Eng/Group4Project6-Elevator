@@ -1,4 +1,4 @@
-//fucntion for opening the tab
+//function for opening the tab
 function openTab(evt, tabName) {
   if(tabName == 'Elevator UI'){
     //redirects to another file
@@ -9,5 +9,8 @@ function openTab(evt, tabName) {
   }
   else if(tabName == 'About Us') {
     window.location = "about.html";
+  }
+  else if(tabName == 'Project Details') {
+    window.location = "proj_details.html";
   }
 }
