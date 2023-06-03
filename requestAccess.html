@@ -14,45 +14,49 @@
 	</head>
 <body>
 
-<div>
+<div id="page">
+
+<div id="content">
+    <article>
     <form action="php/requestAccess.php" method="post" id="requestAccess">
         <h3>Request Access</h3>
-        <div>
+        <section>
             <label for="fname" class="text_label">First Name:</label>
             <input id="fname" type="text" class="text_input" name="fname" placeholder="First Name...">
-        </div>
+        </section>
         
-        <div>
+        <section>
             <label for="lname" class="text_label">Last Name:</label>
             <input id="lname" type="text" class="text_input" name="lname" placeholder="Last Name...">
-        </div>
+        </section>
 
-        <div>
+        <section>
             <label for="email" class="text_label">Email:</label>
             <input id="email" type="text" class="text_input" name="email" placeholder="Email...">
-        </div>
+        </section>
 
-        <div>
+        <section>
             <label for="uname" class="text_label">Username:</label>
             <input id="uname" type="text" class="text_input" name="uname" placeholder="Username...">
-        </div>
+        </section>
 
-        <div>
+        <section>
             <label for="pword" class="text_label">Password:</label>
             <input id="pword" type="password" class="text_input" name="pword" placeholder="Password...">  
-        </div>
+        </section>
 
-        <div>
+        <section>
             <label for="aboutYou" class="text_label">About You:</label>
             <textarea id="aboutYou" type="text" class="text_area" name="aboutYou"></textarea>  
-        </div>
+        </section>
         
-        <div> 
+        <section> 
             <input type="Submit" value="Submit Request">
-        </div>
+        </section>
 
         
     </form>
+    </article>
 
     <p><a href="login.html">Circumvent</a></p>
     
@@ -61,5 +65,15 @@
 </div>
     <footer id="foot">placeholder</footer>
     <script src="time.js"></script>
+
+</div>
+
 </body>
+
+<!--[if |t IE 9]>
+
+    <script src=http://html5shiv.googlecode.com/svn/trunk/html5.js></script>
+
+<![endif]-->
+
 </html>

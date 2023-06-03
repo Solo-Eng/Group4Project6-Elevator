@@ -14,33 +14,53 @@
 	</head>
 <body>
 
-<div>
-  <form action="php/login.php" method="get" id="login">
-    <h3>Login</h3>
-	<div>
-		<label for="uname" class="text_label">Username:</label>
-		<input id="uname" type="text" class="text_input" name="uname" placeholder="Username...">
-	</div>
-	<div>
-		<label for="pword" class="text_label">Password:</label>
-		<input id="pword" type="password" class="text_input" name="pword" placeholder="Password...">
-	</div>
-	<input type="Submit" value="Login" />
+	
 
-	</form>
-</div>
+<div id="page">
 
-<div>
-	<input type="Submit" value="Request Access" onclick="window.location.href='requestAccess.html';">
+<div id="content">
+	<article>
+		<form action="php/login.php" method="get" id="login">
+			<h3>Login</h3>
 
-	<p><a href="index.html">Circumvent</a></p>
+			<section>
+				<label for="uname" class="text_label">Username:</label>
+				<input id="uname" type="text" class="text_input" name="uname" placeholder="Username...">
+			</section>
 
+			<section>
+				<label for="pword" class="text_label">Password:</label>
+				<input id="pword" type="password" class="text_input" name="pword" placeholder="Password...">
+			</section>
+
+			<input type="Submit" value="Login" />
+
+		</form>
+	</article>
+
+	<article>
+		<input type="Submit" value="Request Access" onclick="window.location.href='requestAccess.html';">
+	
+
+		<p><a href="index.html">Circumvent</a></p>
+	</article>
 	
 
 </div>
 
+
+
 <footer id="foot">placeholder</footer>
 <script src="time.js"></script>
 
+</div>
+
 </body>
+
+<!--[if |t IE 9]>
+
+    <script src=http://html5shiv.googlecode.com/svn/trunk/html5.js></script>
+
+<![endif]-->
+
 </html> 
