@@ -11,6 +11,13 @@
   padding: 0px 0px 0px 0px;
   color: black;
 }
+.text_area{
+  width: 150px;
+  height: 150px;
+  text-align: left;
+  padding: 0px 0px 0px 0px;
+  color: black;
+}
 div { padding: 10px 0px 10px 0px;
   width: 274px;
 }
