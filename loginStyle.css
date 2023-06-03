@@ -18,7 +18,18 @@
   padding: 0px 0px 0px 0px;
   color: black;
 }
+
+
+
 div { padding: 10px 0px 10px 0px;
+  width: 274px;
+}
+
+article { padding: 10px 0px 10px 0px;
+  width: 274px;
+}
+
+section { padding: 10px 0px 10px 0px;
   width: 274px;
 }
 

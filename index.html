@@ -31,10 +31,16 @@
 </div>
 <!-- END COMMON-->
 
-<div>
+<div id="page">
+
+  <header>
+    <h3 id="time">Current Time</h3>
+    <script src="time.js"></script>
+  </header>
+
+  <div id="content">
+
   <!-- The UI for the elevator-->
-  <h3 id="time">Current Time</h3>
-  <script src="time.js"></script>
   <h3>Elevator UI</h3>
   <p>Please pick your floor:</p>
   <!-- Designated type, ID, name, and value for each button-->
@@ -121,10 +127,21 @@
 
   
   
-</div>
 
-</div>
+
+  </div>
+
   <footer id="foot">placeholder</footer>
   <script src="time.js"></script>
+
+</div>
+
 </body>
+
+<!--[if |t IE 9]>
+
+    <script src=http://html5shiv.googlecode.com/svn/trunk/html5.js></script>
+
+<![endif]-->
+
 </html> 
