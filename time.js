@@ -1,10 +1,6 @@
 var today = new Date();
 var year = today.getFullYear();
 
-/*  The script fails if it can't find the element its trying to update
-    For example, the birthdays only show on the about page, but we want the footer on every page
-    So the footer needs to come first because the script won't be able to find the birthday IDs
-    */
 
 if(document.getElementById('footLogBs')){
         var ftLBS = document.getElementById('footLogBs');
