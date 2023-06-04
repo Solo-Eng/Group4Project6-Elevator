@@ -11,6 +11,7 @@
 		<link href="loginStyle.css" type="text/css" rel="stylesheet" />
 		<script type="text/javascript" src="script1.js"></script>
         <script type="text/javascript" src="time.js"></script>
+        <script type="text/javascript" src="reqAccess.js"></script>
 	</head>
 <body>
 
@@ -23,39 +24,49 @@
         <section>
             <label for="fname" class="text_label">First Name:</label>
             <input id="fname" type="text" class="text_input" name="fname" placeholder="First Name...">
+            <a id="fnameFeedback" type="feedback"></a>
         </section>
         
         <section>
             <label for="lname" class="text_label">Last Name:</label>
             <input id="lname" type="text" class="text_input" name="lname" placeholder="Last Name...">
+            <a id="lnameFeedback" type="feedback"></a>
         </section>
 
         <section>
             <label for="email" class="text_label">Email:</label>
             <input id="email" type="text" class="text_input" name="email" placeholder="Email...">
+            <a id="emailFeedback" type="feedback"></a>
         </section>
 
         <section>
             <label for="uname" class="text_label">Username:</label>
             <input id="uname" type="text" class="text_input" name="uname" placeholder="Username...">
+            <a id="unameFeedback" type="feedback"></a>
         </section>
 
         <section>
             <label for="pword" class="text_label">Password:</label>
-            <input id="pword" type="password" class="text_input" name="pword" placeholder="Password...">  
+            <input id="pword" type="password" class="text_input" name="pword" placeholder="Password...">
+            <a id="pwordFeedback" type="feedback"></a>  
         </section>
 
         <section>
             <label for="aboutYou" class="text_label">About You:</label>
-            <textarea id="aboutYou" type="text" class="text_area" name="aboutYou"></textarea>  
+            <textarea id="aboutYou" type="text" class="text_area" name="aboutYou"></textarea> 
+            <a id="aboutYouFeedback" type="feedback"></a> 
+            <p id="charLeft"></p>
         </section>
         
         <section> 
-            <input type="Submit" value="Submit Request">
+            <input type="Submit" value="Submit Request" id="submit">
         </section>
 
         
     </form>
+
+    <script src="reqAccess.js"></script>
+
     </article>
 
     <p><a href="login.html">Circumvent</a></p>

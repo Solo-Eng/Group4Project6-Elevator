@@ -6,13 +6,13 @@
   padding: 0px 10px 10px 0px;
 }
 .text_input{
-  width: 150px;
+  width: 200px;
   text-align: left;
   padding: 0px 0px 0px 0px;
   color: black;
 }
 .text_area{
-  width: 150px;
+  width: 200px;
   height: 150px;
   text-align: left;
   padding: 0px 0px 0px 0px;
@@ -22,15 +22,15 @@
 
 
 div { padding: 10px 0px 10px 0px;
-  width: 274px;
+  width: 324px;
 }
 
 article { padding: 10px 0px 10px 0px;
-  width: 274px;
+  width: 324px;
 }
 
 section { padding: 10px 0px 10px 0px;
-  width: 274px;
+  width: 324px;
 }
 
 input[type="Submit"]{
@@ -64,4 +64,10 @@ input[type="Submit"]:active{
   border: none;
   color: white;
   cursor: pointer;
+}
+
+a[type="feedback"]{
+  color: red;
+  font-size: x-small;
+  
 }
