@@ -97,15 +97,15 @@ header, section, footer, aside, nav, article, figure {display: block};
 
 .banner {
   background-color: rgba(252,252,255,255);
-  height: 75px;
+  height: 1%;
   display: grid;
   align-content: center;
   align-items: end;
-  padding: 5px;
+  padding: 0.2%;
 }
 
 .banner img{
-  height: 75px;
+  height: 1%;
   vertical-align: middle;
 }
 
