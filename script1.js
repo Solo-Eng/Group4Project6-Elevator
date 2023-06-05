@@ -11,6 +11,6 @@ function openTab(evt, tabName) {
     window.location = "about.html";
   }
   else if(tabName == 'Project Details') {
-    window.location = "proj_details.html";
+    window.location = "proj-details.html";
   }
 }
