@@ -130,7 +130,6 @@ header, section, footer, aside, nav, article, figure {display: block};
   appearance:none;
   display:block;
   content:url(floorIndication/1-circle-fill.svg);
-  margin-left: 40%;
   padding-bottom: 5%;
   padding-top: 5%;
 }
@@ -140,7 +139,6 @@ header, section, footer, aside, nav, article, figure {display: block};
   appearance:none;
   display:block;
   content:url(floorIndication/2-circle-fill.svg);
-  margin-left: 40%;
   padding-bottom: 5%;
   padding-top: 5%;
 }
@@ -150,7 +148,6 @@ header, section, footer, aside, nav, article, figure {display: block};
   appearance:none;
   display:block;
   content:url(floorIndication/3-circle-fill.svg);
-  margin-left: 40%;
   padding-bottom: 5%;
   padding-top: 5%;
 }
@@ -161,7 +158,6 @@ header, section, footer, aside, nav, article, figure {display: block};
   width:100px;
   appearance:none;
   display:block;
-  margin-left: 40%;
 }
 
 #DownArrow input[type="checkbox"]:hover{
@@ -178,7 +174,6 @@ header, section, footer, aside, nav, article, figure {display: block};
   appearance:none;
   display:block;
   content:url(arrow-up-square.svg);
-  margin-left: 40%;
 }
 
 #UpArrow input[type="checkbox"]:hover{
@@ -199,22 +194,69 @@ header, section, footer, aside, nav, article, figure {display: block};
   font-size: 30px;
   text-align: center;
   background-color: rgb(59, 59, 59);
+  border: 1px solid black;
 }
-.grid-item.elevatorDoor {
+.door-left {
+  grid-column-start: 2;
+  grid-column-end: 5;
+  grid-row-start: 2;
+  grid-row-end: 100;
   background-color: rgb(99, 99, 99);
-}
-.grid-item.elevatorDoor.top{
   border-top: 3px solid rgb(0,0,0);
-}
-.grid-item.elevatorDoor.outer.left{
   border-left: 3px solid rgb(0,0,0);
-}
-.grid-item.elevatorDoor.outer.right {
   border-right: 3px solid rgb(0,0,0);
 }
-.grid-item.elevatorDoor.inner.left {
+.door-right {
+  grid-column-start: 5;
+  grid-column-end: 8;
+  grid-row-start: 2;
+  grid-row-end: 100;
+  background-color: rgb(99, 99, 99);
+  border-top: 3px solid rgb(0,0,0);
+  border-left: 3px solid rgb(0,0,0);
   border-right: 3px solid rgb(0,0,0);
 }
-.grid-item.elevatorDoor.inner.right {
-  border-left: 3px solid rgb(0,0,0);
+#openButton input[type="checkbox"]{
+  content:url(open_t.png);
+  height:100px; 
+  width:100px;
+  appearance:none;
+  display:block;
+}
+
+#openButton input[type="checkbox"]:hover{
+  content:url(open_t_rev.png);
+}
+
+#openButton input[type="checkbox"]:checked{
+  content:url(open_t_g.png);
+}
+
+#closeButton input[type="checkbox"]{
+  height:100px; 
+  width:100px;
+  appearance:none;
+  display:block;
+  content:url(close_t.png);
+}
+
+#closeButton input[type="checkbox"]:hover{
+  content:url(close_t_rev.png);
+}
+
+#closeButton input[type="checkbox"]:checked{
+  content:url(close_t_g.png);
+}
+.elevator-door {
+  overflow: hidden;
+  transition: width 0.5s ease;
+}
+
+/* Animation for opening the door */
+.elevator-door.open {
+  width: 0px;
+}
+
+/* Animation for closing the door */
+.elevator-door.close {
 }

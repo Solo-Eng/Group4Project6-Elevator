@@ -10,6 +10,7 @@
     <link rel="stylesheet" type="text/css" href="style1.css">
     <script type="text/javascript" src="script1.js"></script>
     <script type="text/javascript" src="time.js"></script>
+    <script type="text/javascript" src="elevatorControl.js"></script>
   </head>
 <body>
 <!-- Until "END COMMON" common amongst all tabs on top-->
@@ -55,6 +56,8 @@
     Submit will send the data to the database and
     control the elevator.
   -->
+  
+
   <input type="Submit" value="Submit">
   <br>
   <br>
@@ -73,12 +76,8 @@
     <div class="grid-item"></div>
     <!-- New Row Start-->
     <div class="grid-item"></div>
-    <div class="grid-item elevatorDoor outer left top"></div>
-    <div class="grid-item elevatorDoor middle left top"></div>
-    <div class="grid-item elevatorDoor inner left top"></div>
-    <div class="grid-item elevatorDoor inner right top"></div>
-    <div class="grid-item elevatorDoor middle right top"></div>
-    <div class="grid-item elevatorDoor outer right top"></div>
+    <div class="grid-item elevator-door door-left"></div>
+    <div class="grid-item elevator-door door-right"></div>
     <div class="grid-item" id="FloorNum">
       <img type="floorIndicator"></img>
     </div>
@@ -88,12 +87,6 @@
     <div class="grid-item"></div>
     <!-- New Row Start-->
     <div class="grid-item"></div>
-    <div class="grid-item elevatorDoor left outer"></div>
-    <div class="grid-item elevatorDoor left middle"></div>
-    <div class="grid-item elevatorDoor left inner"></div>
-    <div class="grid-item elevatorDoor right inner"></div>
-    <div class="grid-item elevatorDoor right middle"></div>
-    <div class="grid-item elevatorDoor right outer"></div>
     <div class="grid-item" class="container" id="UpArrow">
       <input type="checkbox"></input>
     </div>
@@ -103,16 +96,21 @@
     <div class="grid-item"></div>
     <!-- New Row Start-->
     <div class="grid-item"></div>
-    <div class="grid-item elevatorDoor left outer"></div>
-    <div class="grid-item elevatorDoor left middle"></div>
-    <div class="grid-item elevatorDoor left inner"></div>
-    <div class="grid-item elevatorDoor right inner"></div>
-    <div class="grid-item elevatorDoor right middle"></div>
-    <div class="grid-item elevatorDoor right outer"></div>
     <div class="grid-item" class="container" id="DownArrow">
       <input type="checkbox"></input>
     </div>
     <div class="grid-item"></div>
+    <div class="grid-item"></div>
+    <div class="grid-item"></div>
+    <div class="grid-item"></div>
+    <!-- New Row Start-->
+    <div class="grid-item"></div>
+    <div class="grid-item" class="container" id="openButton">
+      <input type="checkbox"></input>
+    </div>
+    <div class="grid-item" class="container" id="closeButton">
+      <input type="checkbox"></input>
+    </div>
     <div class="grid-item"></div>
     <div class="grid-item"></div>
     <div class="grid-item"></div>
