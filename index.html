@@ -44,18 +44,28 @@
   <!-- The UI for the elevator-->
   <h3>Elevator UI</h3>
   <p>Please pick your floor:</p>
+
+
+
+  <form action="floorDatabase.php" method="post">
+
   <!-- Designated type, ID, name, and value for each button-->
-  <input type="radio" id="floor1" name="floor" value="1">
+  <input type="radio" id="floor1Select" name="floor" value="1">
   <label for="floor1">Floor 1</label><br>
-  <input type="radio" id="floor2" name="floor" value="2">
+  <input type="radio" id="floor2Select" name="floor" value="2">
   <label for="floor2">Floor 2</label><br>  
-  <input type="radio" id="floor3" name="floor" value="3">
+  <input type="radio" id="floor3Select" name="floor" value="3">
   <label for="floor3">Floor 3</label><br><br>
-  <!-- 
-    Submit will send the data to the database and
-    control the elevator.
-  -->
-  <input type="Submit" value="Submit">
+
+
+  <!--Pressing the Submit button will submit this to the form-->
+  <input type="submit" value="Submit">
+  
+  </form>
+
+
+ 
+
   <br>
   <br>
   <div class="grid-container">
