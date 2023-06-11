@@ -165,7 +165,7 @@ header, section, footer, aside, nav, article, figure {
 }
 
 #DownArrow input[type='checkbox'] {
-  content: url(arrow-down-square.svg);
+  content: url(img/arrow-down-square.svg);
   height: 100px;
   width: 100px;
   appearance: none;
@@ -173,11 +173,11 @@ header, section, footer, aside, nav, article, figure {
 }
 
 #DownArrow input[type='checkbox']:hover {
-  content: url(arrow-down-square-fill.svg);
+  content: url(img/arrow-down-square-fill.svg);
 }
 
 #DownArrow input[type='checkbox']:checked {
-  content: url(arrow-down-green.png);
+  content: url(img/arrow-down-green.png);
 }
 
 #UpArrow input[type='checkbox'] {
@@ -185,21 +185,22 @@ header, section, footer, aside, nav, article, figure {
   width: 100px;
   appearance: none;
   display: block;
-  content: url(arrow-up-square.svg);
+  content: url(img/arrow-up-square.svg);
 }
 
 #UpArrow input[type='checkbox']:hover {
-  content: url(arrow-up-square-fill.svg);
+  content: url(img/arrow-up-square-fill.svg);
 }
 
 #UpArrow input[type='checkbox']:checked {
-  content: url(arrow-up-green.png);
+  content: url(img/arrow-up-green.png);
 }
 
 .grid-container {
   display: grid;
   grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto;
   padding: 10px;
+  overflow: hidden;
 }
 
 .grid-item {
@@ -208,6 +209,7 @@ header, section, footer, aside, nav, article, figure {
   text-align: center;
   background-color: rgb(59, 59, 59);
   border: 1px solid black;
+  overflow: hidden;
 }
 
 .door-left {
@@ -219,43 +221,87 @@ header, section, footer, aside, nav, article, figure {
   border-top: 3px solid rgb(0, 0, 0);
   border-left: 3px solid rgb(0, 0, 0);
   border-right: 3px solid rgb(0, 0, 0);
-  overflow: hidden;
-  animation: doorAnimation 2s ease;
+  width: 100%;
 }
-.door-right.open {
-  overflow: hidden;
-  animation: doorAnimation 2s ease;
-}
-
 .door-right {
-  grid-column-start: 5;
-  grid-column-end: 8;
+  grid-column-start: 8;
+  grid-column-end: 5;
   grid-row-start: 2;
   grid-row-end: 100;
   background-color: rgb(99, 99, 99);
   border-top: 3px solid rgb(0, 0, 0);
   border-left: 3px solid rgb(0, 0, 0);
   border-right: 3px solid rgb(0, 0, 0);
+  width: 100%;
+  animation-duration: 2s;
+  animation-fill-mode: backwards;
 }
 .door-right.open {
-  overflow: hidden;
-  animation: doorAnimation 2s ease;
+  animation: doorAnimationRight 2s ease;
+  width: 0%;
   padding: 0;
-  margin: 0;
+  border: none;
+}
+.door-left.open {
+  animation: doorAnimationLeft 2s ease;
+  width: 0%;
+  padding: 0;
+  border: none;
 }
 /* Animation for opening the door */
-@keyframes doorAnimation {
+@keyframes doorAnimationLeft {
   0% {
-    transform: translateX(0%) scaleX(1);
+    width: 100%;
   }
   100% {
-    transform: translateX(-55%) scaleX(0);
+    width: 0%;
+    padding: 0;
+  }
+}
+@keyframes doorAnimationRight {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 0%;
+    padding: 0;
+    margin-left: 100%;
+  }
+}
+.door-right.close {
+  animation: doorAnimationCRight 2s ease;
+  width: 100%;
+  padding: 0;
+}
+.door-left.close {
+  animation: doorAnimationCLeft 2s ease;
+  width: 100%;
+  padding: 0;
+}
+/* Animation for closing the door */
+@keyframes doorAnimationCLeft {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+    padding: 0;
+  }
+}
+@keyframes doorAnimationCRight {
+  0% {
+    width: 0%;
+    margin-left: 100%;
+  }
+  100% {
+    width: 100%;
+    padding: 0;
+    margin-left: 0%;
   }
 }
 
-
 #openButton input[type='checkbox'] {
-  content: url(open_t.png);
+  content: url(img/open_t.png);
   height: 100px;
   width: 100px;
   appearance: none;
@@ -263,11 +309,11 @@ header, section, footer, aside, nav, article, figure {
 }
 
 #openButton input[type='checkbox']:hover {
-  content: url(open_t_rev.png);
+  content: url(img/open_t_rev.png);
 }
 
 #openButton input[type='checkbox']:checked {
-  content: url(open_t_g.png);
+  content: url(img/open_t_g.png);
 }
 
 #closeButton input[type='checkbox'] {
@@ -275,13 +321,13 @@ header, section, footer, aside, nav, article, figure {
   width: 100px;
   appearance: none;
   display: block;
-  content: url(close_t.png);
+  content: url(img/close_t.png);
 }
 
 #closeButton input[type='checkbox']:hover {
-  content: url(close_t_rev.png);
+  content: url(img/close_t_rev.png);
 }
 
 #closeButton input[type='checkbox']:checked {
-  content: url(close_t_g.png);
+  content: url(img/close_t_g.png);
 }
