@@ -9,138 +9,111 @@
     <link rel="icon" type="image/x-icon" href="Spheal.ico">
     <link rel="stylesheet" type="text/css" href="style1.css">
     <script type="text/javascript" src="script1.js"></script>
-    <script type="text/javascript" src="time.js"></script>
     <script type="text/javascript" src="elevatorControl.js"></script>
+    <script type="text/javascript" src="indicatorScript.js"></script>
   </head>
-<body>
-<!-- Until "END COMMON" common amongst all tabs on top-->
-<div class="banner">
-  <h1 >
-    <img src="SphealBounce.gif"></video>
-    Project 6 Group 4
-  </h1>
-</div>
-<!-- This is for the tabs at the top of the page-->
-<div class="tab">
-  <!--  
-    Given an onclick event, this will redirect to the Javascript
-    potion where the tab will redirect to another page
-  -->
-  <button onclick="openTab(event, 'Elevator UI')">Elevator UI</button>
-  <button onclick="openTab(event, 'Documents')">Documents</button>
-  <button onclick="openTab(event, 'About Us')">About Us</button>
-  <button onclick="openTab(event, 'Project Details')">Project Details</button>
-</div>
-<!-- END COMMON-->
-
-<div id="page">
-
-  <header>
-    <h3 id="time">Current Time</h3>
-    <script src="time.js"></script>
-  </header>
-
-  <div id="content">
-
-  <!-- The UI for the elevator-->
-  <h3>Elevator UI</h3>
-  <p>Please pick your floor:</p>
-  <!-- Designated type, ID, name, and value for each button-->
-  <input type="radio" id="floor1" name="floor" value="1">
-  <label for="floor1">Floor 1</label><br>
-  <input type="radio" id="floor2" name="floor" value="2">
-  <label for="floor2">Floor 2</label><br>  
-  <input type="radio" id="floor3" name="floor" value="3">
-  <label for="floor3">Floor 3</label><br><br>
-  <!-- 
-    Submit will send the data to the database and
-    control the elevator.
-  -->
-  
-
-  <input type="Submit" value="Submit">
-  <br>
-  <br>
-  <div class="grid-container">
-    <div class="grid-item"></div>
-    <div class="grid-item"></div>
-    <div class="grid-item"></div>
-    <div class="grid-item"></div>
-    <div class="grid-item"></div>
-    <div class="grid-item"></div>
-    <div class="grid-item"></div>
-    <div class="grid-item"></div>
-    <div class="grid-item"></div>
-    <div class="grid-item"></div>
-    <div class="grid-item"></div>
-    <div class="grid-item"></div>
-    <!-- New Row Start-->
-    <div class="grid-item"></div>
-    <div class="grid-item elevator-door door-left"></div>
-    <div class="grid-item elevator-door door-right"></div>
-    <div class="grid-item" id="FloorNum">
-      <img type="floorIndicator"></img>
+  <body>
+    <!-- Until "END COMMON" common amongst all tabs on top-->
+    <div class="banner">
+      <h1>
+        <img src="SphealBounce.gif"></video>
+        Project 6 Group 4
+      </h1>
     </div>
-    <div class="grid-item"></div>
-    <div class="grid-item"></div>
-    <div class="grid-item"></div>
-    <div class="grid-item"></div>
-    <!-- New Row Start-->
-    <div class="grid-item"></div>
-    <div class="grid-item" class="container" id="UpArrow">
-      <input type="checkbox"></input>
+    <!-- This is for the tabs at the top of the page-->
+    <div class="tab">
+      <!--  
+        Given an onclick event, this will redirect to the Javascript
+        potion where the tab will redirect to another page
+      -->
+      <button onclick="openTab(event, 'Elevator UI')">Elevator UI</button>
+      <button onclick="openTab(event, 'Documents')">Documents</button>
+      <button onclick="openTab(event, 'About Us')">About Us</button>
+      <button onclick="openTab(event, 'Project Details')">Project Details</button>
     </div>
-    <div class="grid-item"></div>
-    <div class="grid-item"></div>
-    <div class="grid-item"></div>
-    <div class="grid-item"></div>
-    <!-- New Row Start-->
-    <div class="grid-item"></div>
-    <div class="grid-item" class="container" id="DownArrow">
-      <input type="checkbox"></input>
+    <!-- END COMMON-->
+
+    <div id="page">
+      <header>
+        <h3 id="time">Current Time</h3>
+      </header>
+
+      <div id="content">
+        <!-- The UI for the elevator-->
+        <h3>Elevator UI</h3>
+        <p>Please pick your floor:</p>
+        <!-- Designated type, ID, name, and value for each button-->
+        <input type="radio" id="floor1" name="floor" value="1">
+        <label for="floor1">Floor 1</label><br>
+        <input type="radio" id="floor2" name="floor" value="2">
+        <label for="floor2">Floor 2</label><br>  
+        <input type="radio" id="floor3" name="floor" value="3">
+        <label for="floor3">Floor 3</label><br><br>
+        <!-- Submit will send the data to the database and control the elevator. -->
+        <input type="Submit" value="Submit">
+        <br><br>
+        <div class="grid-container">
+          <div class="grid-item"></div>
+          <div class="grid-item"></div>
+          <div class="grid-item"></div>
+          <div class="grid-item"></div>
+          <div class="grid-item"></div>
+          <div class="grid-item"></div>
+          <div class="grid-item"></div>
+          <div class="grid-item"></div>
+          <div class="grid-item"></div>
+          <div class="grid-item"></div>
+          <div class="grid-item"></div>
+          <div class="grid-item"></div>
+          <!-- New Row Start-->
+          <div class="grid-item"></div>
+          <div class="grid-item elevator-door door-left"></div>
+          <div class="grid-item elevator-door door-right"></div>
+          <div class="grid-item" id="FloorNum">
+            <img type="floorIndicator" alt="Floor Indicator">
+          </div>
+          <div class="grid-item"></div>
+          <div class="grid-item"></div>
+          <div class="grid-item"></div>
+          <div class="grid-item"></div>
+          <!-- New Row Start-->
+          <div class="grid-item"></div>
+          <div class="grid-item container" id="UpArrow">
+            <input type="checkbox">
+          </div>
+          <div class="grid-item"></div>
+          <div class="grid-item"></div>
+          <div class="grid-item"></div>
+          <div class="grid-item"></div>
+          <!-- New Row Start-->
+          <div class="grid-item"></div>
+          <div class="grid-item container" id="DownArrow">
+            <input type="checkbox">
+          </div>
+          <div class="grid-item"></div>
+          <div class="grid-item"></div>
+          <div class="grid-item"></div>
+          <div class="grid-item"></div>
+          <!-- New Row Start-->
+          <div class="grid-item"></div>
+          <div class="grid-item container">
+            <input type="checkbox" id="openButton">
+          </div>
+          <div class="grid-item container">
+            <input type="checkbox" id="closeButton">
+          </div>
+          <div class="grid-item" id="test">!</div>
+          <div class="grid-item"></div>
+          <div class="grid-item"></div>
+          <!-- New Row Start-->
+        </div>
+
+        <p>Wanna know about the developers? <a href="about.html">Click here</a></p><br/>
+        <a href="login.html">Login as security</a>
+      </div>
+
+      <footer id="foot">placeholder</footer>
+      <script src="time.js"></script>
     </div>
-    <div class="grid-item"></div>
-    <div class="grid-item"></div>
-    <div class="grid-item"></div>
-    <div class="grid-item"></div>
-    <!-- New Row Start-->
-    <div class="grid-item"></div>
-    <div class="grid-item" class="container" id="openButton">
-      <input type="checkbox"></input>
-    </div>
-    <div class="grid-item" class="container" id="closeButton">
-      <input type="checkbox"></input>
-    </div>
-    <div class="grid-item"></div>
-    <div class="grid-item"></div>
-    <div class="grid-item"></div>
-    <!-- New Row Start-->
-  </div>
-
-  <script src="indicatorScript.js"></script>
-
-
-
-  <p>Wanna know about the developers? <a href="about.html">Click here</a></p><br/>
-  <a href="login.html">Login as security</a>
-
-  
-  
-
-
-  </div>
-
-  <footer id="foot">placeholder</footer>
-  <script src="time.js"></script>
-
-</div>
-
-</body>
-
-<!--[if |t IE 9]>
-
-    <script src=http://html5shiv.googlecode.com/svn/trunk/html5.js></script>
-
-<![endif]-->
-
-</html> 
+  </body>
+</html>
