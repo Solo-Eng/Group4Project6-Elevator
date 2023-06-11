@@ -208,7 +208,6 @@ header, section, footer, aside, nav, article, figure {
   font-size: 30px;
   text-align: center;
   background-color: rgb(59, 59, 59);
-  border: 1px solid black;
   overflow: hidden;
 }
 
