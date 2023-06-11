@@ -10,7 +10,7 @@
     <link rel="stylesheet" type="text/css" href="style1.css">
     <script type="text/javascript" src="script1.js"></script>
     <script type="text/javascript" src="elevatorControl.js"></script>
-    <script type="text/javascript" src="indicatorScript.js"></script>
+    
   </head>
   <body>
     <!-- Until "END COMMON" common amongst all tabs on top-->
@@ -33,25 +33,38 @@
     </div>
     <!-- END COMMON-->
 
-    <div id="page">
-      <header>
-        <h3 id="time">Current Time</h3>
-      </header>
+  <div id="page">
 
-      <div id="content">
-        <!-- The UI for the elevator-->
-        <h3>Elevator UI</h3>
-        <p>Please pick your floor:</p>
-        <!-- Designated type, ID, name, and value for each button-->
-        <input type="radio" id="floor1" name="floor" value="1">
-        <label for="floor1">Floor 1</label><br>
-        <input type="radio" id="floor2" name="floor" value="2">
-        <label for="floor2">Floor 2</label><br>  
-        <input type="radio" id="floor3" name="floor" value="3">
-        <label for="floor3">Floor 3</label><br><br>
-        <!-- Submit will send the data to the database and control the elevator. -->
-        <input type="Submit" value="Submit">
-        <br><br>
+    <header>
+      <h3 id="time">Current Time</h3>
+      <script src="time.js"></script>
+    </header>
+
+  <div id="content">
+
+  <!-- The UI for the elevator-->
+  <h3>Elevator UI</h3>
+  <p>Please pick your floor:</p>
+
+
+
+  <form action="floorDatabase.php" method="post" id="floorSelect">
+
+  <!-- Designated type, ID, name, and value for each button-->
+  <input type="radio" id="floor1Select" name="floor" value="1">
+  <label for="floor1">Floor 1</label><br>
+  <input type="radio" id="floor2Select" name="floor" value="2">
+  <label for="floor2">Floor 2</label><br>  
+  <input type="radio" id="floor3Select" name="floor" value="3">
+  <label for="floor3">Floor 3</label><br><br>
+
+
+  <!--Pressing the Submit button will submit this to the form-->
+  <input type="submit" value="Submit">
+  
+        </form>
+        <br>
+        <br>
         <div class="grid-container">
           <div class="grid-item"></div>
           <div class="grid-item"></div>
@@ -70,7 +83,7 @@
           <div class="grid-item elevator-door door-left"></div>
           <div class="grid-item elevator-door door-right"></div>
           <div class="grid-item" id="FloorNum">
-            <img type="floorIndicator" alt="Floor Indicator">
+            <img type="floorIndicator">
           </div>
           <div class="grid-item"></div>
           <div class="grid-item"></div>
@@ -107,6 +120,8 @@
           <div class="grid-item"></div>
           <!-- New Row Start-->
         </div>
+
+        <script src="indicatorScript.js"></script>
 
         <p>Wanna know about the developers? <a href="about.html">Click here</a></p><br/>
         <a href="login.html">Login as security</a>
