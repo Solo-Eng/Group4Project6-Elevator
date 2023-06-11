@@ -134,32 +134,30 @@ header, section, footer, aside, nav, article, figure {
   }
 }
 
-#Circle1 img[type='floorIndicator'] {
-  height: 100px;
-  width: 100px;
-  appearance: none;
-  display: block;
-  content: url(floorIndication/1-circle-fill.svg);
+#Circle1 img[type="floorIndicator"]{
+  height:100px; 
+  width:100px;
+  appearance:none;
+  display:block;
+  content:url(floorIndication/1-circle-fill.svg);
   padding-bottom: 5%;
   padding-top: 5%;
 }
-
-#Circle2 img[type='floorIndicator'] {
-  height: 100px;
-  width: 100px;
-  appearance: none;
-  display: block;
-  content: url(floorIndication/2-circle-fill.svg);
+#Circle2 img[type="floorIndicator"]{
+  height:100px; 
+  width:100px;
+  appearance:none;
+  display:block;
+  content:url(floorIndication/2-circle-fill.svg);
   padding-bottom: 5%;
   padding-top: 5%;
 }
-
-#Circle3 img[type='floorIndicator'] {
-  height: 100px;
-  width: 100px;
-  appearance: none;
-  display: block;
-  content: url(floorIndication/3-circle-fill.svg);
+#Circle3 img[type="floorIndicator"]{
+  height:100px; 
+  width:100px;
+  appearance:none;
+  display:block;
+  content:url(floorIndication/3-circle-fill.svg);
   padding-bottom: 5%;
   padding-top: 5%;
 }
@@ -208,7 +206,7 @@ header, section, footer, aside, nav, article, figure {
   font-size: 30px;
   text-align: center;
   background-color: rgb(59, 59, 59);
-  border: 1px solid black;
+  border: 0px solid black;
   overflow: hidden;
 }
 
