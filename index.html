@@ -18,39 +18,51 @@
       <h1>
         <img src="img/SphealBounce.gif"></video>
         Project 6 Group 4
-      </h1>
-    </div>
-    <!-- This is for the tabs at the top of the page-->
-    <div class="tab">
-      <!--  
-        Given an onclick event, this will redirect to the Javascript
-        potion where the tab will redirect to another page
-      -->
-      <button onclick="openTab(event, 'Elevator UI')">Elevator UI</button>
-      <button onclick="openTab(event, 'Documents')">Documents</button>
-      <button onclick="openTab(event, 'About Us')">About Us</button>
-      <button onclick="openTab(event, 'Project Details')">Project Details</button>
-    </div>
-    <!-- END COMMON-->
+  </h1>
+</div>
+<!-- This is for the tabs at the top of the page-->
+<div class="tab">
+  <!--  
+    Given an onclick event, this will redirect to the Javascript
+    potion where the tab will redirect to another page
+  -->
+  <button onclick="openTab(event, 'Elevator UI')">Elevator UI</button>
+  <button onclick="openTab(event, 'Documents')">Documents</button>
+  <button onclick="openTab(event, 'About Us')">About Us</button>
+  <button onclick="openTab(event, 'Project Details')">Project Details</button>
+</div>
+<!-- END COMMON-->
 
-    <div id="page">
-      <header>
-        <h3 id="time">Current Time</h3>
-      </header>
+<div id="page">
 
-      <div id="content">
-        <!-- The UI for the elevator-->
-        <h3>Elevator UI</h3>
-        <p>Please pick your floor:</p>
-        <!-- Designated type, ID, name, and value for each button-->
-        <input type="radio" id="floor1" name="floor" value="1">
-        <label for="floor1">Floor 1</label><br>
-        <input type="radio" id="floor2" name="floor" value="2">
-        <label for="floor2">Floor 2</label><br>  
-        <input type="radio" id="floor3" name="floor" value="3">
-        <label for="floor3">Floor 3</label><br><br>
-        <!-- Submit will send the data to the database and control the elevator. -->
-        <input type="Submit" value="Submit">
+  <header>
+    <h3 id="time">Current Time</h3>
+    <script src="time.js"></script>
+  </header>
+
+  <div id="content">
+
+  <!-- The UI for the elevator-->
+  <h3>Elevator UI</h3>
+  <p>Please pick your floor:</p>
+
+
+
+  <form action="floorDatabase.php" method="post" id="floorSelect">
+
+  <!-- Designated type, ID, name, and value for each button-->
+  <input type="radio" id="floor1Select" name="floor" value="1">
+  <label for="floor1">Floor 1</label><br>
+  <input type="radio" id="floor2Select" name="floor" value="2">
+  <label for="floor2">Floor 2</label><br>  
+  <input type="radio" id="floor3Select" name="floor" value="3">
+  <label for="floor3">Floor 3</label><br><br>
+
+
+  <!--Pressing the Submit button will submit this to the form-->
+  <input type="submit" value="Submit">
+  
+  </form
         <br><br>
         <div class="grid-container">
           <div class="grid-item"></div>
