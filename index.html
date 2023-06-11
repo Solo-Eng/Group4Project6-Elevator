@@ -6,17 +6,18 @@
     <meta name="robots" content="noindex nofollow" />
     <meta http-equiv="author" content="Ben Allen, Liam Cain, Guneet Matharu, Nickolas Raghunath" />
     <meta http-equiv="pragma" content="no-cache" />
-    <link rel="icon" type="image/x-icon" href="Spheal.ico">
+    <link rel="icon" type="image/x-icon" href="img/Spheal.ico">
     <link rel="stylesheet" type="text/css" href="style1.css">
     <script type="text/javascript" src="script1.js"></script>
-    <script type="text/javascript" src="time.js"></script>
+    <script type="text/javascript" src="elevatorControl.js"></script>
+    <script type="text/javascript" src="indicatorScript.js"></script>
   </head>
-<body>
-<!-- Until "END COMMON" common amongst all tabs on top-->
-<div class="banner">
-  <h1 >
-    <img src="SphealBounce.gif"></video>
-    Project 6 Group 4
+  <body>
+    <!-- Until "END COMMON" common amongst all tabs on top-->
+    <div class="banner">
+      <h1>
+        <img src="img/SphealBounce.gif"></video>
+        Project 6 Group 4
   </h1>
 </div>
 <!-- This is for the tabs at the top of the page-->
@@ -61,98 +62,70 @@
   <!--Pressing the Submit button will submit this to the form-->
   <input type="submit" value="Submit">
   
-  </form>
+  </form
+        <br><br>
+        <div class="grid-container">
+          <div class="grid-item"></div>
+          <div class="grid-item"></div>
+          <div class="grid-item"></div>
+          <div class="grid-item"></div>
+          <div class="grid-item"></div>
+          <div class="grid-item"></div>
+          <div class="grid-item"></div>
+          <div class="grid-item"></div>
+          <div class="grid-item"></div>
+          <div class="grid-item"></div>
+          <div class="grid-item"></div>
+          <div class="grid-item"></div>
+          <!-- New Row Start-->
+          <div class="grid-item"></div>
+          <div class="grid-item elevator-door door-left"></div>
+          <div class="grid-item elevator-door door-right"></div>
+          <div class="grid-item" id="FloorNum">
+            <img type="floorIndicator" alt="Floor Indicator">
+          </div>
+          <div class="grid-item"></div>
+          <div class="grid-item"></div>
+          <div class="grid-item"></div>
+          <div class="grid-item"></div>
+          <!-- New Row Start-->
+          <div class="grid-item"></div>
+          <div class="grid-item container" id="UpArrow">
+            <input type="checkbox">
+          </div>
+          <div class="grid-item"></div>
+          <div class="grid-item"></div>
+          <div class="grid-item"></div>
+          <div class="grid-item"></div>
+          <!-- New Row Start-->
+          <div class="grid-item"></div>
+          <div class="grid-item container" id="DownArrow">
+            <input type="checkbox">
+          </div>
+          <div class="grid-item"></div>
+          <div class="grid-item"></div>
+          <div class="grid-item"></div>
+          <div class="grid-item"></div>
+          <!-- New Row Start-->
+          <div class="grid-item"></div>
+          <div class="grid-item container" id="openButton">
+            <input type="checkbox" id="jsOpenButton">
+          </div>
+          <div class="grid-item container" id="closeButton">
+            <input type="checkbox" id="jsCloseButton">
+          </div>
+          <div class="grid-item"></div>
+          <div class="grid-item"></div>
+          <div class="grid-item"></div>
+          <!-- New Row Start-->
+        </div>
 
+        <p>Wanna know about the developers? <a href="about.html">Click here</a></p><br/>
+        <a href="login.html">Login as security</a>
+      </div>
 
- 
-
-  <br>
-  <br>
-  <div class="grid-container">
-    <div class="grid-item"></div>
-    <div class="grid-item"></div>
-    <div class="grid-item"></div>
-    <div class="grid-item"></div>
-    <div class="grid-item"></div>
-    <div class="grid-item"></div>
-    <div class="grid-item"></div>
-    <div class="grid-item"></div>
-    <div class="grid-item"></div>
-    <div class="grid-item"></div>
-    <div class="grid-item"></div>
-    <div class="grid-item"></div>
-    <!-- New Row Start-->
-    <div class="grid-item"></div>
-    <div class="grid-item elevatorDoor outer left top"></div>
-    <div class="grid-item elevatorDoor middle left top"></div>
-    <div class="grid-item elevatorDoor inner left top"></div>
-    <div class="grid-item elevatorDoor inner right top"></div>
-    <div class="grid-item elevatorDoor middle right top"></div>
-    <div class="grid-item elevatorDoor outer right top"></div>
-    <div class="grid-item" id="FloorNum">
-      <img type="floorIndicator"></img>
+      <footer id="foot">placeholder</footer>
+      <script src="time.js"></script>
     </div>
-    <div class="grid-item"></div>
-    <div class="grid-item"></div>
-    <div class="grid-item"></div>
-    <div class="grid-item"></div>
-    <!-- New Row Start-->
-    <div class="grid-item"></div>
-    <div class="grid-item elevatorDoor left outer"></div>
-    <div class="grid-item elevatorDoor left middle"></div>
-    <div class="grid-item elevatorDoor left inner"></div>
-    <div class="grid-item elevatorDoor right inner"></div>
-    <div class="grid-item elevatorDoor right middle"></div>
-    <div class="grid-item elevatorDoor right outer"></div>
-    <div class="grid-item" class="container" id="UpArrow">
-      <input type="checkbox"></input>
-    </div>
-    <div class="grid-item"></div>
-    <div class="grid-item"></div>
-    <div class="grid-item"></div>
-    <div class="grid-item"></div>
-    <!-- New Row Start-->
-    <div class="grid-item"></div>
-    <div class="grid-item elevatorDoor left outer"></div>
-    <div class="grid-item elevatorDoor left middle"></div>
-    <div class="grid-item elevatorDoor left inner"></div>
-    <div class="grid-item elevatorDoor right inner"></div>
-    <div class="grid-item elevatorDoor right middle"></div>
-    <div class="grid-item elevatorDoor right outer"></div>
-    <div class="grid-item" class="container" id="DownArrow">
-      <input type="checkbox"></input>
-    </div>
-    <div class="grid-item"></div>
-    <div class="grid-item"></div>
-    <div class="grid-item"></div>
-    <div class="grid-item"></div>
-    <!-- New Row Start-->
-  </div>
-
-  <script src="indicatorScript.js"></script>
-
-
-
-  <p>Wanna know about the developers? <a href="about.html">Click here</a></p><br/>
-  <a href="login.html">Login as security</a>
-
-  
-  
-
-
-  </div>
-
-  <footer id="foot">placeholder</footer>
-  <script src="time.js"></script>
-
-</div>
-
-</body>
-
-<!--[if |t IE 9]>
-
-    <script src=http://html5shiv.googlecode.com/svn/trunk/html5.js></script>
-
-<![endif]-->
-
-</html> 
+  </body>
+</html>

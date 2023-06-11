@@ -1,4 +1,3 @@
-
 // for changing the floor symbol
 let floorIcon = document.getElementById('FloorNum');
 
