@@ -210,6 +210,13 @@ header, section, footer, aside, nav, article, figure {
   overflow: hidden;
 }
 
+.grid-container2 {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto;
+  padding: 10px;
+  overflow: hidden;
+}
+
 .door-left {
   grid-column-start: 2;
   grid-column-end: 5;
