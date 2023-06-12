@@ -336,3 +336,11 @@ header, section, footer, aside, nav, article, figure {
 #closeButton input[type='checkbox']:checked {
   content: url(img/close_t_g.png);
 }
+
+.FloorSign {
+  grid-column-start: 4;
+  grid-column-end: 6;
+  background-color: rgb(59, 59, 59);
+  display: flex;
+  justify-content: center;
+}
