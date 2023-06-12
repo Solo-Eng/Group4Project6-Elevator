@@ -1,3 +1,5 @@
+
+
 // for changing the floor symbol
 let floorIcon = document.getElementById('FloorNum');
 
@@ -25,5 +27,6 @@ f1.addEventListener('click',floor2,false);
 
 f1 = document.getElementById('floor3Select');
 f1.addEventListener('click',floor3,false);
+
 
 
