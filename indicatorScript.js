@@ -12,6 +12,15 @@ let floor1check = document.getElementById('DownArrow');
 var f1, f2, f3;
 
 // functions change the active circle when their radio button is selected
+window.onload = function floor0(){
+    floorIcon.id='Circle1';
+	floor3check.id='UpArrow';
+	document.getElementById('UpArrow').style.paddingBottom = '10px';
+	document.getElementById('DownArrow').style.paddingTop = '116px';
+	document.getElementById('check1').style.display = 'inherit';
+	document.getElementById('check2').style.display = 'none';
+}
+
 function floor1(){
     floorIcon.id='Circle1';
 	floor3check.id='UpArrow';
