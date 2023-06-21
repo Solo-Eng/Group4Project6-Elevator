@@ -14,5 +14,13 @@
         "uname": "JDoe1234",
         "pword": "passJohn",
         "aboutYou": "A test account for testing things"
+    },
+    {
+        "fname": "John",
+        "lname": "Doe",
+        "email": "JDoe1234@conestogac.on.ca",
+        "uname": "JDoe1234",
+        "pword": "passJohn",
+        "aboutYou": "A test account for testing things"
     }
 ]
