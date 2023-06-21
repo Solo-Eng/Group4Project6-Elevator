@@ -1,0 +1,47 @@
+div { padding: 10px 0px 10px 0px;
+    width: 500px;
+  }
+  
+  article { padding: 10px 0px 10px 0px;
+    width: 500px;
+  }
+  
+  section { padding: 10px 0px 10px 0px;
+    width: 500px;
+  }
+  
+  input[type="Submit"]{
+    width: 200px;
+    padding: 5px 3px 5px 3px;
+    margin-left: 30%;
+    margin-bottom: 2%;
+    background-color: #3498db;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
+  
+  input[type="Submit"]:hover{
+    width: 200px;
+    padding: 5px 3px 5px 3px;
+    margin-left: 30%;
+    margin-bottom: 2%;
+    background-color: #3498ff;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
+  
+  input[type="Submit"]:active{
+    width: 200px;
+    padding: 5px 3px 5px 3px;
+    margin-left: 30%;
+    margin-bottom: 2%;
+    background-color: #082C4C;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
