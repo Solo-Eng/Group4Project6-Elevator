@@ -3,6 +3,7 @@
     // creates and starts session
     session_start(); 
 
+    // get the username and password that the user inputted
     $username = $_GET['username'];
     $password = $_GET['password'];
 
@@ -29,14 +30,8 @@
         }
         else{
             echo "Unknown user!";
-        }
-
-
-        
+        }     
 
 
     }
-
-
-
 ?>
