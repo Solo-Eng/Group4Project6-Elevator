@@ -33,7 +33,8 @@
 
     }
     else{
-        echo "You're not supposed to be here >:(";
+        // Login failed, go away
+        header('Location: http://localhost/php/goaway.php');
     }
 
 
