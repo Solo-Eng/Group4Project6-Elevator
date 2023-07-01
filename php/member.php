@@ -27,14 +27,13 @@
 
     // check to see if a user is logged in before being able to access the page
     if(isset($_SESSION['username'])){
-       // echo "<p>Hello " . $_SESSION['username']. "! You have reached the hideout!</p>";
-       // echo "Click <a href='logout.php'>here</a> to log out";
+
        echo "<h3>Welcome " . $_SESSION['username'] . "! You have reached the Guild!</h3>";
 
     }
     else{
         // Login failed, go away
-        header('Location: http://localhost/php/goaway.php');
+        header('Location: goaway.php');
     }
 
 
