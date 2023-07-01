@@ -7,32 +7,47 @@
     $username = $_GET['username'];
     $password = $_GET['password'];
 
+
+    $adminsJson = file_get_contents('../json/admins.json');
+    $adminsArray = json_decode($adminsJson, true);
+
+
     // If the username and password fields have been inputted...
     if($username&&$password){
 
-        // Check if username matches one in the database:
-        if($username == 'admin'){
+        // scan through the admins.json for admin credentials
+        foreach ($adminsArray as $unameData){
 
-            // Username matches one in the database, now check the password
-            if($password == '1234'){
+            // Check to see if the username enters matches one in the json file
+            if($username == $unameData["uname"]){
 
-                // Attach the username to the session
-                $_SESSION['username'] = $username;
+                // Check to see if the password enters matches the corresponing password in the json file
+                if($password == $unameData["pword"]){
 
-                //echo "<p>You are logged in as '$username'</p>";
-                //echo "<p>The log out link can be found in <a href='member.php'>here</a></p>";
-                header('Location: member.php');
+                    // Attach session to the user
+                    $_SESSION['username']=$username;
 
+                    //Redirect them to the member page
+                    header('Location: member.php');
+
+                } else{
+                    // Password failed, but user name correct
+                    echo "<p>Password Incorrect!</p>";
+                }
+                
+            } else{
+                // Username unrecognized
+                echo "<p>User unrecognized!</p>";
             }
-            else{
-                echo "<p>Password Incorrect!</p>";
-            }
+            
+        }    
 
-        }
-        else{
-            echo "Unknown user!";
-        }     
-
-
+        
+    } else{
+        // Nothing entered...
+        echo "<p>Please enter credentials!</p>";
     }
+
+    
+
 ?>
