@@ -19,8 +19,9 @@
                 // Attach the username to the session
                 $_SESSION['username'] = $username;
 
-                echo "<p>You are logged in as '$username'</p>";
-                echo "<p>The log out link can be found in <a href='member.php'>here</a></p>";
+                //echo "<p>You are logged in as '$username'</p>";
+                //echo "<p>The log out link can be found in <a href='member.php'>here</a></p>";
+                header('Location: member.php');
 
             }
             else{
