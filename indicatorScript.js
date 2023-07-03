@@ -82,8 +82,14 @@ f1.addEventListener('click',floor3,false);
 uArrowChecked = document.getElementById('UpArrow');
 uArrowChecked.addEventListener('click', callElevator, false);
 
-function submitNumber(){
-	document.getElementByClass("floorNumber").submit();
+function submitNumber1(){
+	document.getElementById("floorNumber1").submit();
+}
+function submitNumber2(){
+	document.getElementById("floorNumber2").submit();
+}
+function submitNumber3(){
+	document.getElementById("floorNumber3").submit();
 }
 
 
