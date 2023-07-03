@@ -28,7 +28,7 @@
     // check to see if a user is logged in before being able to access the page
     if(isset($_SESSION['username'])){
 
-       echo "<h3>Welcome " . $_SESSION['username'] . "! You are now viewing users pending access!</h3>";
+       echo "<h3>Welcome " . $_SESSION['username'] . "! You are now viewing users with Admin privileges!</h3>";
 
     }
     else{
@@ -47,14 +47,19 @@
 
 	<article>
 
-        <h3>This is the first user in the queue</h3>
+        <h3>This is the first user with Admin Priviliges</h3>
         <?php
+            // The fundamentals of this code is the same from the admitUsers.php
+            // To simplify development, it essentially removes the admin and returns them
+            // if they are passed or stays as removed if revoked
+
+
             // Opens the json file
-            $usersJson = file_get_contents('../json/users.json');
-            $userArray = json_decode($usersJson, true);
+            $currentAdminsJson = file_get_contents('../json/admins.json');
+            $currentAdminsArray = json_decode($currentAdminsJson, true);
             
 
-            foreach ($userArray as $infoArray){
+            foreach ($currentAdminsArray as $infoArray){
                 echo "uname: ". $infoArray["uname"] . "<br>";
                 echo "      fname: ". $infoArray["fname"] . "<br>";
                 echo "      lname: ". $infoArray["lname"] . "<br>";
@@ -67,78 +72,78 @@
                 // These data values are stored in $infoArray
                 break;
             }
+            // Save the info 
+            $repostAdmin = array(
+                "fname" => $infoArray["fname"],
+                "lname" => $infoArray["lname"],
+                "email" => $infoArray["email"],
+                "uname" => $infoArray["uname"],
+                "pword" => $infoArray["pword"],
+                "aboutYou" => $infoArray["aboutYou"]
+            );
+           
            
             if(array_key_exists('button1', $_POST)) {
 
+                // Remove the user
+                if (!empty($currentAdminsArray)) {
+                  array_shift($currentAdminsArray);
+                }
+
+                // Update the database
+                $tempBase = json_encode($currentAdminsArray, JSON_PRETTY_PRINT);
+                file_put_contents('../json/admins.json', $tempBase);
+
+                // Reopen the database
                 // open the admins Json
                 $adminsJson = file_get_contents('../json/admins.json');
                 $adminsArray = json_decode($adminsJson, true);
 
-                // Save the current Admins list
-                foreach ($adminsArray as $currentAdmins){
-                }
-
-                // build the new admin array
-                $newAdmin = array(
-                    "fname" => $infoArray["fname"],
-                    "lname" => $infoArray["lname"],
-                    "email" => $infoArray["email"],
-                    "uname" => $infoArray["uname"],
-                    "pword" => $infoArray["pword"],
-                    "aboutYou" => $infoArray["aboutYou"]
-                );
-
-                $adminsArray[] = $newAdmin; // Append the new user to the existing array
+                // Append
+                $adminsArray[] = $repostAdmin; 
 
                 $updatedAdmins = json_encode($adminsArray, JSON_PRETTY_PRINT);
 
                 file_put_contents('../json/admins.json', $updatedAdmins);
-
-
-                // Remove entry
-                if (!empty($userArray)) {
-                    array_shift($userArray);
-                }
-
-                // Re-post new user list
-                $newUsersData = json_encode($userArray, JSON_PRETTY_PRINT);
-                file_put_contents('../json/users.json', $newUsersData);
                 
                 
                 // Reload the page
-                header('Location: admitUsers.php');
+                header('Location: removeUsers.php');
             }
             else if(array_key_exists('button2', $_POST)) {
-
-                // Remove entry
-                if (!empty($userArray)) {
-                    array_shift($userArray);
-                }
-
-                // Re-post new user list
-                $newUsersData = json_encode($userArray, JSON_PRETTY_PRINT);
-                file_put_contents('../json/users.json', $newUsersData);
+                // Remove the user
+                if (!empty($currentAdminsArray)) {
+                    array_shift($currentAdminsArray);
+                  }
+  
+                  // Update the database
+                  $tempBase = json_encode($currentAdminsArray, JSON_PRETTY_PRINT);
+                  file_put_contents('../json/admins.json', $tempBase);
+  
+                  // Reopen the database
+                  // open the admins Json
+                  $adminsJson = file_get_contents('../json/admins.json');
+                  $adminsArray = json_decode($adminsJson, true);
                 
                 
                 // Reload the page
-                header('Location: admitUsers.php');
+                header('Location: removeUsers.php');
             }
             
 
         ?>
         <h3>Should they be admitted or denied?</h3>
         <form method="post">
-        <input type="Submit" name="button1" value="Admit" />
-        <input type="Submit" name="button2" value="Deny" />
-        
+        <input type="Submit" name="button1" value="Pass" />
+        <input type="Submit" name="button2" value="Revoke" />
         </form>
 	</article>
 	
 
 </div>
 
-<input type="Submit" value="Return" onclick="window.location.href='member.php';">
 
+<input type="Submit" value="Return" onclick="window.location.href='member.php';">
 <!--<footer id="foot">placeholder</footer>
 <script src="time.js"></script>-->
 

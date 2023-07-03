@@ -46,7 +46,7 @@
     <input type="Submit" value="Return to Home" onclick="window.location.href='../index.html';">
     <input type="Submit" value="View Diagnostics" onclick="window.location.href='../index.html';">
     <input type="Submit" value="Admit Users" onclick="window.location.href='admitUsers.php';">
-    <input type="Submit" value="Remove Users" onclick="window.location.href='../index.html';">
+    <input type="Submit" value="Remove Users" onclick="window.location.href='removeUsers.php';">
     <input type="Submit" value="Evaluate Elevator Health" onclick="window.location.href='../index.html';">
     <br>
     <br>
