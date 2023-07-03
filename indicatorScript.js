@@ -78,5 +78,12 @@ f1.addEventListener('click',floor2,false);
 f1 = document.getElementById('floor3Select');
 f1.addEventListener('click',floor3,false);
 
+//Listen for arrow clicked event
+uArrowChecked = document.getElementById('UpArrow');
+uArrowChecked.addEventListener('click', callElevator, false);
+
+function submitNumber(){
+	document.getElementById("floorNumber").submit();
+}
 
 
