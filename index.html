@@ -98,10 +98,9 @@
               xhr.open('GET', 'index.php', true);
               xhr.onload = function () {
                 if (xhr.status === 200) {
-                var phpValue = xhr.responseText;
-                console.log(phpValue);
-                // Use the retrieved value as needed
+                var curFlr = xhr.responseText;
                 console.log(curFlr);
+                // Use the retrieved value as needed
                 if(curFlr == 1){
                   floorIcon.id='Circle1';
                   upArrow.id='UpArrow';
