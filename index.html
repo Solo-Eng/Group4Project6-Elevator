@@ -93,17 +93,62 @@
           <div class="grid-item"></div>
           <div class="grid-item"></div>
 		      <div class="grid-item FloorSign" id ="FloorNum"><img type="floorIndicator">
-            <?php
-              if(isset($_POST['newfloor'])) {
-                $curFlr = update_elevatorNetwork(1, $_POST['newfloor']); 
-                header('Refresh:0; url=index.php');	
-              } 
-              $curFlr = get_currentFloor();
-              json_encode($curFlr);			
-            ?>	
-            <script src="indicatorScript.js"></script>
             <script>
-              handlePhpValue("<?php echo $phpValue; ?>");
+              function getData() {
+                var xhr = new XMLHttpRequest();
+                xhr.open('GET', 'index.php', true);
+                xhr.onload = function () {
+                  if (xhr.status === 200) {
+                    var phpValue = xhr.responseText;
+                    console.log(phpValue);
+                    // Use the retrieved value as needed
+                    handlePhpValue("<?php echo $phpValue; ?>");
+                    function handlePhpValue(curFlr){
+                      console.log(curFlr);
+                      if(curFlr == 1){
+                        floorIcon.id='Circle1';
+                        upArrow.id='UpArrow';
+                        document.getElementById('UpArrow').style.paddingBottom = '10px';
+                        document.getElementById('DownArrow').style.paddingTop = '116px';
+                        document.getElementById('check1').style.display = 'inherit';
+                        document.getElementById('check2').style.display = 'none';
+                        audio1.play();
+                        audio2.pause();
+                        audio2.currentTime=0;
+                        audio3.pause();
+                        audio3.currentTime=0;
+                      }
+                      else if(curFlr == 2){
+                        floorIcon.id='Circle2';
+                        upArrow.id='UpArrow';
+                        downArrow.id='DownArrow';
+                        document.getElementById('UpArrow').style.paddingBottom = '10px';
+                        document.getElementById('DownArrow').style.paddingTop = '10px';
+                        document.getElementById('check1').style.display = 'inherit';
+                        document.getElementById('check2').style.display = 'inherit';
+                        audio2.play();
+                        audio1.pause();
+                        audio1.currentTime=0;
+                        audio3.pause();
+                        audio3.currentTime=0;
+                      }
+                      else if (curFlr == 3){
+                        floorIcon.id='Circle3';
+                        document.getElementById('UpArrow').style.paddingBottom = '116px';
+                        document.getElementById('DownArrow').style.paddingTop = '10px';
+                        document.getElementById('check1').style.display = 'none';
+                        document.getElementById('check2').style.display = 'inherit';
+                        audio3.play();
+                        audio1.pause();
+                        audio1.currentTime=0;
+                        audio2.pause();
+                        audio2.currentTime=0;
+                      }
+                    }
+                  }
+                };
+                xhr.send();
+              }
             </script>
           </div>
           
