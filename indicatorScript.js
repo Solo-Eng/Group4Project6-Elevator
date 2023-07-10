@@ -95,6 +95,7 @@ function submitNumber3(){
 }
 
 function handlePhpValue(curFlr){
+	console.log(curFlr);
 	if(curFlr == 1){
 		floorIcon.id='Circle1';
 		floor3check.id='UpArrow';
