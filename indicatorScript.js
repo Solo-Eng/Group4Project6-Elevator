@@ -70,48 +70,6 @@ function floor3(){
 
 // Event listeners looking at each of the radio buttons
 
-var curFlr = "<?php echo $curFlr; ?>";
-console.log(curFlr);
-if(curFlr == 1){
-	floorIcon.id='Circle1';
-	floor3check.id='UpArrow';
-	document.getElementById('UpArrow').style.paddingBottom = '10px';
-	document.getElementById('DownArrow').style.paddingTop = '116px';
-	document.getElementById('check1').style.display = 'inherit';
-	document.getElementById('check2').style.display = 'none';
-	audio1.play();
-	audio2.pause();
-	audio2.currentTime=0;
-	audio3.pause();
-	audio3.currentTime=0;
-}
-else if(curFlr == 2){
-	floorIcon.id='Circle2';
-	floor3check.id='UpArrow';
-	floor1check.id='DownArrow';
-	document.getElementById('UpArrow').style.paddingBottom = '10px';
-	document.getElementById('DownArrow').style.paddingTop = '10px';
-	document.getElementById('check1').style.display = 'inherit';
-	document.getElementById('check2').style.display = 'inherit';
-	audio2.play();
-	audio1.pause();
-	audio1.currentTime=0;
-	audio3.pause();
-	audio3.currentTime=0;
-}
-else {
-	floorIcon.id='Circle3';
-	document.getElementById('UpArrow').style.paddingBottom = '116px';
-	document.getElementById('DownArrow').style.paddingTop = '10px';
-	document.getElementById('check1').style.display = 'none';
-	document.getElementById('check2').style.display = 'inherit';
-	audio3.play();
-	audio1.pause();
-	audio1.currentTime=0;
-	audio2.pause();
-	audio2.currentTime=0;
-}
-
 f1 = document.getElementById('floor1Select');
 f1.addEventListener('click',floor1,false);
 
@@ -134,4 +92,46 @@ function submitNumber2(){
 }
 function submitNumber3(){
 	document.getElementById("floorNumber3").submit();
+}
+
+function handlePhpValue(curFlr){
+	if(curFlr == 1){
+		floorIcon.id='Circle1';
+		floor3check.id='UpArrow';
+		document.getElementById('UpArrow').style.paddingBottom = '10px';
+		document.getElementById('DownArrow').style.paddingTop = '116px';
+		document.getElementById('check1').style.display = 'inherit';
+		document.getElementById('check2').style.display = 'none';
+		audio1.play();
+		audio2.pause();
+		audio2.currentTime=0;
+		audio3.pause();
+		audio3.currentTime=0;
+	}
+	else if(curFlr == 2){
+		floorIcon.id='Circle2';
+		floor3check.id='UpArrow';
+		floor1check.id='DownArrow';
+		document.getElementById('UpArrow').style.paddingBottom = '10px';
+		document.getElementById('DownArrow').style.paddingTop = '10px';
+		document.getElementById('check1').style.display = 'inherit';
+		document.getElementById('check2').style.display = 'inherit';
+		audio2.play();
+		audio1.pause();
+		audio1.currentTime=0;
+		audio3.pause();
+		audio3.currentTime=0;
+	}
+	else {
+		floorIcon.id='Circle3';
+		document.getElementById('UpArrow').style.paddingBottom = '116px';
+		document.getElementById('DownArrow').style.paddingTop = '10px';
+		document.getElementById('check1').style.display = 'none';
+		document.getElementById('check2').style.display = 'inherit';
+		audio3.play();
+		audio1.pause();
+		audio1.currentTime=0;
+		audio2.pause();
+		audio2.currentTime=0;
+	}
 }
