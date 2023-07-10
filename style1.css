@@ -294,6 +294,32 @@ header, section, footer, aside, nav, article, figure {
   border-right: 3px solid rgb(0, 0, 0);
   width: 100%;
 }
+.door-left img{
+  z-index: -1;
+  content:none;
+}
+.door-left.open img{
+  z-index: -1;
+  content:url(insideElevator.png);
+  position: absolute;
+  overflow:hidden;
+  height: 57%;
+  width: 48%;
+  animation: none;
+  /*animation-direction:normal;
+  animation-duration: 0.1ms;*/
+}
+.door-left.close img{
+  z-index: -1;
+  content:url(insideElevator.png);
+  position: absolute;
+  overflow:hidden;
+  height: 57%;
+  width: 48%;
+  animation: none;
+  /*animation-direction:normal;
+  animation-duration: 0.1ms;*/
+}
 .door-right {
   grid-column-start: 8;
   grid-column-end: 5;
