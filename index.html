@@ -102,7 +102,7 @@
                     var phpValue = xhr.responseText;
                     console.log(phpValue);
                     // Use the retrieved value as needed
-                    handlePhpValue("<?php echo $phpValue; ?>");
+                    handlePhpValue(phpValue);
                     function handlePhpValue(curFlr){
                       console.log(curFlr);
                       if(curFlr == 1){
