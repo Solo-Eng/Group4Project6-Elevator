@@ -100,12 +100,13 @@ function showFloor() {
 	// Function to be executed when readyState changes (server response ready)
 	xmlhttpShow.onreadystatechange = function() {
 		if(this.readyState == 4 && this.status == 200) {
-		// readyState holds the status of the XMLHttpRequest (4 means finished request and server response is ready)
-		// status hold 200 for OK
+			// readyState holds the status of the XMLHttpRequest (4 means finished request and server response is ready)
+			// status hold 200 for OK
+			console.log("showFloor->if(this.readystate)");
 
 		} };
-		xmlhttpShow.open("GET", "index.php?q=", true);  // Open connection
-		xmlhttpShow.send();                                       // Send request
+	xmlhttpShow.open("GET", "index.php?q=", true);  // Open connection
+	xmlhttpShow.send();                                       // Send request
 		
 }
 window.addEventListener('load', function() {showFloorInterval()}, false);
