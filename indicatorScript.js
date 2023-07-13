@@ -106,7 +106,7 @@ function showFloor() {
 
 
 		} };
-	xmlhttpShow.open("GET", "index.html?q=", true);  // Open connection
+	xmlhttpShow.open("GET", "index.php?q=", true);  // Open connection
 	xmlhttpShow.send();                                       // Send request
 		
 }
