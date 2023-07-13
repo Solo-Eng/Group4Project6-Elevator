@@ -70,7 +70,7 @@
   <label for="floor3">Floor 3</label><br><br>
 	<div class = hidden>
     <?php
-      $q = $-REQUEST["q"]
+      $q = $-REQUEST["q"];
       if(isset($_POST['newfloor'])) {
         $curFlr = update_elevatorNetwork(1, $_POST['newfloor']); 
         header('Refresh:0; url=index.php');	
