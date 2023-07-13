@@ -90,10 +90,12 @@ function submitNumber3(){
 }
 
 function showFloorInterval() {    // Automatic updates every 250 ms
+	console.log("showFloorInterval");
 	setInterval(showFloor, 5000);
 }
 
 function showFloor() {
+	console.log("showFloor");
 	var xmlhttpShow = new XMLHttpRequest();     // Instantiate a XMLHttpRequest object
 	// Function to be executed when readyState changes (server response ready)
 	xmlhttpShow.onreadystatechange = function() {
@@ -106,4 +108,4 @@ function showFloor() {
 		xmlhttpShow.send();                                       // Send request
 		
 }
-window.addEventListener('load', function() {showFloorInterval(), false});
+window.addEventListener('load', function() {showFloorInterval()}, false);
