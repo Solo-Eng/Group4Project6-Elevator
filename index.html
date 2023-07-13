@@ -68,15 +68,17 @@
   <label for="floor2">Floor 2</label><br>  
   <input type="radio" id="floor3Select" name="floor" value="3">
   <label for="floor3">Floor 3</label><br><br>
-	
-  <?php
-    if(isset($_POST['newfloor'])) {
-      $curFlr = update_elevatorNetwork(1, $_POST['newfloor']); 
-      header('Refresh:0; url=index.php');	
-    } 
-    $curFlr = get_currentFloor();
-    echo json_encode($curFlr);			
-  ?>		
+	<div class = hidden>
+    <?php
+      $q = $-REQUEST["q"]
+      if(isset($_POST['newfloor'])) {
+        $curFlr = update_elevatorNetwork(1, $_POST['newfloor']); 
+        header('Refresh:0; url=index.php');	
+      } 
+      $curFlr = get_currentFloor();
+      echo json_encode($curFlr);			
+    ?>		
+  </div>
   <!--Pressing the Submit button will submit this to the form-->
   <input type="submit" value="Submit">
   

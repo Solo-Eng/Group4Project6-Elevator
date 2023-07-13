@@ -408,3 +408,7 @@ header, section, footer, aside, nav, article, figure {
   justify-content: center;
 }
 
+.hidden {
+  display: none;
+}
+
