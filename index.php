@@ -38,7 +38,7 @@
       } 
       $curFlr = get_currentFloor();
       /*echo json_encode($curFlr);*/
-	  exit(json_encode($curFlr));		
+	  exit($curFlr);		
     ?>		
   </div>
 
