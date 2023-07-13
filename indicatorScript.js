@@ -102,7 +102,7 @@ function showFloor() {
 		if(this.readyState == 4 && this.status == 200) {
 			// readyState holds the status of the XMLHttpRequest (4 means finished request and server response is ready)
 			// status hold 200 for OK
-			console.log(xhr.responseText);
+			console.log(this.response);
 
 
 		} };
