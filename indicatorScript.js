@@ -91,7 +91,7 @@ function submitNumber3(){
 
 function showFloorInterval() {    // Automatic updates every 250 ms
 	console.log("showFloorInterval");
-	setInterval(showFloor, 5000);
+	setInterval(showFloor, 1000);
 }
 
 function showFloor() {
@@ -102,8 +102,7 @@ function showFloor() {
 		if(this.readyState == 4 && this.status == 200) {
 			// readyState holds the status of the XMLHttpRequest (4 means finished request and server response is ready)
 			// status hold 200 for OK
-			console.log(this.responseText(1));
-
+			console.log(lastIndexOf(this.responseText));
 
 		} };
 	xmlhttpShow.open("GET", "index.php?q=", true);  // Open connection
