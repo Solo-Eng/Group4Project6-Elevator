@@ -88,3 +88,22 @@ function submitNumber2(){
 function submitNumber3(){
 	document.getElementById("floorNumber3").submit();
 }
+
+function showFloorInterval() {    // Automatic updates every 250 ms
+	setInterval(showFloor, 5000);
+}
+
+function showFloor() {
+	var xmlhttpShow = new XMLHttpRequest();     // Instantiate a XMLHttpRequest object
+	// Function to be executed when readyState changes (server response ready)
+	xmlhttpShow.onreadystatechange = function() {
+		if(this.readyState == 4 && this.status == 200) {
+		// readyState holds the status of the XMLHttpRequest (4 means finished request and server response is ready)
+		// status hold 200 for OK
+
+		} };
+		xmlhttpShow.open("GET", "index.php?q=", true);  // Open connection
+		xmlhttpShow.send();                                       // Send request
+		
+}
+window.addEventListener('load', function() {showFloorInterval(), false});
