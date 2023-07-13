@@ -75,7 +75,7 @@
       header('Refresh:0; url=index.php');	
     } 
     $curFlr = get_currentFloor();
-    echo "<h2>Current floor # $curFlr </h2>";			
+    echo json_encode($curFlr);			
   ?>		
   <!--Pressing the Submit button will submit this to the form-->
   <input type="submit" value="Submit">
