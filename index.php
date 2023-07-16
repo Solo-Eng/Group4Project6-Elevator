@@ -178,8 +178,6 @@
 			return $current_floor;
 	}
 ?>
-	
-
 <div class = hidden>
     <?php
       if(isset($_POST['newfloor'])) {
