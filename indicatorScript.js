@@ -106,7 +106,7 @@ function showFloor() {
 			console.log(num);
 
 		} };
-	xmlhttpShow.open("GET", "floorUpdate.php?=", true);  // Open connection
+	xmlhttpShow.open("GET", "floorUpdate.php?q=", true);  // Open connection
 	xmlhttpShow.send();                                       // Send request
 		
 }
