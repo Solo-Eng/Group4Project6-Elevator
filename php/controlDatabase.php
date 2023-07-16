@@ -41,7 +41,7 @@
         $time1 = date('H:i:s');
 
         $db = new PDO(
-            'mysql:host=127.0.0.1;dbname=elevatorG4',
+            'mysql:host=127.0.0.1;dbname=elevator',
             'ese',
             'ese'
         );
@@ -84,7 +84,7 @@
 
     function displayDatabase(): void{
         $db = new PDO(
-            'mysql:host=127.0.0.1;dbname=elevatorG4',
+            'mysql:host=127.0.0.1;dbname=elevator',
             'ese',
             'ese'
         );
