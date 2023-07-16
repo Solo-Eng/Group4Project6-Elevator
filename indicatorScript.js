@@ -102,10 +102,7 @@ function showFloor() {
 		if(this.readyState == 4 && this.status == 200) {
 			// readyState holds the status of the XMLHttpRequest (4 means finished request and server response is ready)
 			// status hold 200 for OK
-			try {
-				var curFlr = JSON.parse(this.responseText);
-			  }catch(e) {}
-			console.log(curFlr);
+			console.log(this.responseText);
 
 		} };
 	xmlhttpShow.open("GET", "index.php?q=", true);  // Open connection

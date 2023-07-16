@@ -184,6 +184,7 @@
     header('Refresh:0; url=index.php');	
   } 
   $curFlr = get_currentFloor();
+  header('Content-type: application/json; charset=UTF-8');
   echo json_encode($curFlr);	
 ?>
 
