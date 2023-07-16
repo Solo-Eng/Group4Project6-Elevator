@@ -48,6 +48,7 @@
     <input type="Submit" value="Admit Users" onclick="window.location.href='admitUsers.php';">
     <input type="Submit" value="Remove Users" onclick="window.location.href='removeUsers.php';">
     <input type="Submit" value="Evaluate Elevator Health" onclick="window.location.href='../index.html';">
+    <input type="Submit" value="Control Database" onclick="window.location.href='controlDatabase.php';">
     <br>
     <br>
     <input type="Submit" value="Logout" onclick="window.location.href='logout.php';">
