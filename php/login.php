@@ -38,6 +38,7 @@
             } else{
                 // Username unrecognized
                 echo "<p>User unrecognized!</p>";
+                break;
             }
             
         }    
