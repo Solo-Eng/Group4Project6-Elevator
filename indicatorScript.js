@@ -79,12 +79,6 @@ f1.addEventListener('click',floor2,false);
 f1 = document.getElementById('floor3Select');
 f1.addEventListener('click',floor3,false);
 
-function submitNumber1(){
-	document.getElementById("floorNumber1").submit();
-}
-function submitNumber2(){
-	document.getElementById("floorNumber2").submit();
-}
-function submitNumber3(){
-	document.getElementById("floorNumber3").submit();
-}
+document.getElementById('floorNumber1').addEventListener('click',floor1,false);
+document.getElementById('floorNumber1').addEventListener('click',floor2,false);
+document.getElementById('floorNumber1').addEventListener('click',floor3,false);
