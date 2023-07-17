@@ -10,6 +10,7 @@
 		<link rel="stylesheet" type="text/css" href="style1.css">
 		<script type="text/javascript" src="script1.js"></script>
 		<script type="text/javascript" src="elevatorControl.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	</head>
 	<body>
     	<!-- Until "END COMMON" common amongst all tabs on top-->
