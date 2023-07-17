@@ -79,7 +79,18 @@
 			<div class="grid-item"></div>
 			<div class="grid-item"></div>
 			<div class="grid-item"></div>
-				<div class="grid-item FloorSign" id ="FloorNum"><img type="floorIndicator"></div>
+				<div class="grid-item FloorSign" id ="FloorNum"><img type="floorIndicator">
+					<?php
+						if ($curFlr == 1){
+							?>
+							<script src="js/Circle1.js"></script>
+							<?php
+						}
+						else {
+							echo "Nope";
+						}
+					?>
+				</div>
 			<div class="grid-item"></div>
 			<div class="grid-item"></div>
 			<div class="grid-item"></div>
@@ -94,7 +105,7 @@
 			<div class="grid-item"></div>
 			<div class="grid-item container2" id="one">
 			<form action="index.php" method="POST" Id="floorNumber1">
-				<input type="checkbox" name="newfloor" value="1" onclick="submitNumber1()">
+				<input type="checkbox" name="newfloor" value="1">
 			</form>
 			</div>
 			<div class="grid-item"></div>
@@ -107,7 +118,7 @@
 			</div>
 			<div class="grid-item container2" id="two">
 			<form action="index.php" method="POST" Id="floorNumber2">
-				<input type="checkbox" name="newfloor" value="2" onclick="submitNumber2()">
+				<input type="checkbox" name="newfloor" value="2">
 			</form>
 			</div>
 			<div class="grid-item"></div>
@@ -120,7 +131,7 @@
 			</div>
 			<div class="grid-item container2" id="three">
 			<form action="index.php" method="POST" Id="floorNumber3">
-				<input type="checkbox" name="newfloor" value="3" onclick="submitNumber3()">
+				<input type="checkbox" name="newfloor" value="3">
 			</form>
 			</div>
 			<div class="grid-item"></div>
