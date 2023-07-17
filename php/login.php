@@ -28,7 +28,7 @@
                     $_SESSION['username']=$username;
 
                     //Redirect them to the member page
-                    header('Location: member.php');
+                    header('Location: ../index.php');
 
                 } else{
                     // Password failed, but user name correct
