@@ -111,7 +111,7 @@ function submitNumber3(){
 	//document.getElementById("floorNumber3").submit();
 	var floor = 3;
 	floor3();
-	$.ajax({
+	request = $.ajax({
 		type: "POST",
 		url: "php/indicatorPost.php",
 		dataType: 'json',
@@ -122,6 +122,12 @@ function submitNumber3(){
 			console.log("worked!");
 		}
 
+	});
+	request.fail(function (jqXHR, textStatus, errorThrown){
+		console.error(
+			"The following error occurred: "+
+            textStatus, errorThrown
+		);
 	});
 }
 
