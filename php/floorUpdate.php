@@ -13,6 +13,7 @@
 //     // Set the value of the floor if receive the 'floor' key to the value sent here
 //     $_SESSION['floor'] = $curFlr;        // Store this in the database later
 //   } 
-//   echo json_encode($_SESSION['floor']);	
-  echo "1";
+//   echo json_encode($_SESSION['floor']);
+  $curFlr = get_currentFloor();
+  echo $curFlr;
 ?>
