@@ -111,13 +111,12 @@ function submitNumber3(){
 	//document.getElementById("floorNumber3").submit();
 	var floor = 3;
 	floor3();
+	jsonData = JSON.parse(floor);
 	request = $.ajax({
 		type: "POST",
 		url: "php/indicatorPost.php",
 		dataType: 'json',
-		data: {
-			json: JSON.stringify(floor)
-		},
+		data: jsonData,
 		success: function () {
 			console.log("worked!");
 		}
