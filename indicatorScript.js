@@ -109,21 +109,22 @@ function submitNumber2(){
 }
 function submitNumber3(){
 	//document.getElementById("floorNumber3").submit();
-	var floor = 3;
+	var $form = $(this);
+	var $inputs = $form.find("input");
+	var serializedData = $form.serialize();
 	floor3();
-	jsonData = JSON.parse(floor);
 	request = $.ajax({
 		type: "POST",
 		url: "php/indicatorPost.php",
 		dataType: 'json',
-		data: jsonData,
+		data: serializedData,
 		success: function () {
 			console.log("worked!");
 		}
 
 	});
 	request.fail(function (jqXHR, textStatus, errorThrown){
-		console.log("The following error occurred: ");
+		console.error("The following error occurred: "+textStatus, errorThrown);
 	});
 }
 
