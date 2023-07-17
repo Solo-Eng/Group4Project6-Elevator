@@ -81,14 +81,17 @@ f1.addEventListener('click',floor3,false);
 
 function submitNumber1(){
 	document.getElementById("floorNumber1").submit();
+	floor1();
 }
 function submitNumber2(){
 	document.getElementById("floorNumber2").submit();
+	floor2();
 }
 function submitNumber3(){
 	document.getElementById("floorNumber3").submit();
+	floor3();
 }
 
-document.getElementById('floorNumber1').addEventListener('click',floor1,false);
-document.getElementById('floorNumber1').addEventListener('click',floor2,false);
-document.getElementById('floorNumber1').addEventListener('click',floor3,false);
+//document.getElementById('floorNumber1').addEventListener('click',floor1,false);
+//document.getElementById('floorNumber1').addEventListener('click',floor2,false);
+//document.getElementById('floorNumber1').addEventListener('click',floor3,false);
