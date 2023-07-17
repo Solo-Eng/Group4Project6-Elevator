@@ -123,7 +123,7 @@ function submitNumber3(){
 
 	});
 	request.fail(function (jqXHR, textStatus, errorThrown){
-		console.error("The following error occurred: "+textStatus, errorThrown);
+		console.log("The following error occurred: "+textStatus, errorThrown);
 	});
 }
 
