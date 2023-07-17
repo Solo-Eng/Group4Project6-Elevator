@@ -152,7 +152,7 @@
 		</div>
 
 		<script src="js/floorNumberUpdate.js"></script>
-		<script src="indicatorScript.js"></script>
+		<!--<script src="indicatorScript.js"></script>-->
 
 		<p>Wanna know about the developers? <a href="about.html">Click here</a></p><br/>
 		<a href="login.html">Login as security</a>
