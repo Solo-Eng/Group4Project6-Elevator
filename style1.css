@@ -297,6 +297,8 @@ header, section, footer, aside, nav, article, figure {
 .door-left img{
   z-index: -1;
   content:none;
+  border:none !important;
+  overflow:hidden;
 }
 .door-left.open img{
   z-index: -1;
@@ -308,8 +310,7 @@ header, section, footer, aside, nav, article, figure {
   animation: none;
   top: 690px! important;
   left: 185px !important;
-  /*animation-direction:normal;
-  animation-duration: 0.1ms;*/
+  border: none !important;
 }
 .door-left.close img{
   z-index: -1;
@@ -321,8 +322,7 @@ header, section, footer, aside, nav, article, figure {
   animation: none;
   top: 690px! important;
   left: 185px !important;
-  /*animation-direction:normal;
-  animation-duration: 0.1ms;*/
+  border: none !important;
 }
 .door-right {
   grid-column-start: 8;
