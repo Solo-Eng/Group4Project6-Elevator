@@ -74,6 +74,14 @@
 	
 		</form>
 		<br>
+		<?php
+			if(isset($_POST['newfloor'])) {
+			$curFlr = update_elevatorNetwork(1, $_POST['newfloor']); 
+			header('Refresh:0; url=index.php');	
+			} 
+			$curFlr = get_currentFloor();
+			echo "<h2>Current floor # $curFlr </h2>";			
+		?>	
 		<br>
 		<div class="grid-container">
 			<div class="grid-item"></div>
