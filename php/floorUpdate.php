@@ -15,5 +15,5 @@
 //   } 
 //   echo json_encode($_SESSION['floor']);
   $curFlr = get_currentFloor();
-  echo $curFlr;
+  echo json_encode($curFlr);
 ?>
