@@ -108,7 +108,7 @@ function submitNumber2(){
 	});
 }
 function submitNumber3(){
-	document.getElementById("floorNumber3").submit();
+	//document.getElementById("floorNumber3").submit();
 	var floor = 3;
 	floor3();
 	$.ajax({
