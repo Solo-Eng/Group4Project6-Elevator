@@ -81,16 +81,45 @@ f1.addEventListener('click',floor3,false);
 
 function submitNumber1(){
 	document.getElementById("floorNumber1").submit();
+	var floor = 1;
 	floor1();
+	$.ajax({
+		type: 'post',
+		url: 'index.php',
+		data: floor,
+		success: function () {
+			console.log("worked!");
+		}
+
+	});
 }
 function submitNumber2(){
-	event.preventDefault();
 	document.getElementById("floorNumber2").submit();
+	var floor = 2;
 	floor2();
+	$.ajax({
+		type: 'post',
+		url: 'index.php',
+		data: floor,
+		success: function () {
+			console.log("worked!");
+		}
+
+	});
 }
 function submitNumber3(){
 	document.getElementById("floorNumber3").submit();
+	var floor = 3;
 	floor3();
+	$.ajax({
+		type: 'post',
+		url: 'index.php',
+		data: floor,
+		success: function () {
+			console.log("worked!");
+		}
+
+	});
 }
 
 //document.getElementById('floorNumber1').addEventListener('click',floor1,false);

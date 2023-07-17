@@ -97,7 +97,7 @@
 						</form>
 					</div>
 					<div class="grid-item container2" id="one">
-						<form action="index.php" method="POST" Id="floorNumber1" onsubmit="return false">
+						<form action="index.php" method="POST" Id="floorNumber1">
 							<input type="checkbox" name="newfloor" value="1" onclick="submitNumber1()">
 						</form>
 					</div>
@@ -110,7 +110,7 @@
 						<input class="hidablebutton1" id="check1" type="checkbox">
 					</div>
 					<div class="grid-item container2" id="two">
-						<form action="index.php" method="POST" Id="floorNumber2" onsubmit="return false">
+						<form action="index.php" method="POST" Id="floorNumber2">
 							<input type="checkbox" name="newfloor" value="2" onclick="submitNumber2()">
 						</form>
 					</div>
@@ -123,7 +123,7 @@
 						<input class="hidablebutton2" id="check2" type="checkbox">
 					</div>
 					<div class="grid-item container2" id="three">
-						<form action="index.php" method="POST" Id="floorNumber3" onsubmit="return false">
+						<form action="" method="POST" Id="floorNumber3">
 							<input type="checkbox" name="newfloor" value="3" onclick="submitNumber3()">
 						</form>
 					</div>
