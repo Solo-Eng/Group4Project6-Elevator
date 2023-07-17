@@ -79,18 +79,16 @@ f1.addEventListener('click',floor2,false);
 f1 = document.getElementById('floor3Select');
 f1.addEventListener('click',floor3,false);
 
-function submitNumber1(event){
-	event.preventDefault();
+function submitNumber1(){
 	document.getElementById("floorNumber1").submit();
 	floor1();
 }
-function submitNumber2(event){
+function submitNumber2(){
 	event.preventDefault();
 	document.getElementById("floorNumber2").submit();
 	floor2();
 }
-function submitNumber3(event){
-	event.preventDefault();
+function submitNumber3(){
 	document.getElementById("floorNumber3").submit();
 	floor3();
 }
