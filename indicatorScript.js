@@ -113,7 +113,8 @@ function submitNumber3(){
 	floor3();
 	$.ajax({
 		type: "POST",
-		url: "index.php",
+		url: "indicatorPost.php",
+		dataType: 'json',
 		data: {
 			json: JSON.stringify(floor)
 		},
