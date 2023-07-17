@@ -112,9 +112,11 @@ function submitNumber3(){
 	var floor = 3;
 	floor3();
 	$.ajax({
-		type: 'post',
-		url: 'index.php',
-		data: floor,
+		type: "POST",
+		url: "index.php",
+		data: {
+			json: JSON.stringify(floor)
+		},
 		success: function () {
 			console.log("worked!");
 		}

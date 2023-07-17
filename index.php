@@ -160,6 +160,10 @@
 		$query = 'UPDATE elevatorNetwork 
 				SET currentFloor = :floor
 				WHERE nodeID = :id';
+		$json = filter_input(INPUT_POST, 'json');
+		$decoded_json = json_decode($json);
+		echo $decoded_json;
+		echo $new_floor;
 		$statement = $db1->prepare($query);
 		$statement->bindvalue('floor', $new_floor);
 		$statement->bindvalue('id', $node_ID);
