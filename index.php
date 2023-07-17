@@ -98,7 +98,7 @@
 					</div>
 					<div class="grid-item container2" id="one">
 						<form action="index.php" method="POST" Id="floorNumber1">
-							<input type="checkbox" name="newfloor" value="1">
+							<input type="checkbox" name="newfloor" value="1" onclick="submitNumber1()">
 						</form>
 					</div>
 					<div class="grid-item"></div>
