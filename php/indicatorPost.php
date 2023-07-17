@@ -5,6 +5,7 @@
 				SET currentFloor = :floor
 				WHERE nodeID = :id';
         $new_floor = isset($_POST['newfloor']) ? $_POST['newfloor'] : null;
+        echo "worked";
 		$statement = $db1->prepare($query);
 		$statement->bindvalue('floor', $new_floor);
 		$statement->bindvalue('id', $node_ID);
