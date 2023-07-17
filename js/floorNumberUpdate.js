@@ -18,4 +18,4 @@ function showFloor() {
 function showFloorInterval() {    // Automatic updates every 5 s
     setInterval(showFloor, 1000);
 }
-window.addEventListener('load', function() {showFloorInterval}, false);  // Button updates 250 ms after pressed
+window.addEventListener('load', function() {showFloorInterval(3000)}, false);  // Button updates 250 ms after pressed
