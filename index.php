@@ -145,6 +145,7 @@
 				<script src="floorIndication/indicatorScript.js"></script>
 				<script type="text/javascript" src="floorIndication/FloorIndication.js"></script>
 				<script type="text/javascript" src="FloorButtons/FloorButtons.js"></script>
+				<script type="text/javascript" src="UserFloor/UserFloor.js"></script>
 				<p>Wanna know about the developers? <a href="about.html">Click here</a></p><br/>
 				<a href="login.html">Login as security</a>
 			</div>
