@@ -162,66 +162,6 @@ header, section, footer, aside, nav, article, figure {
   padding-top: 5%;
 }
 
-/*Floor Numbers*/
-
-#one input[type='checkbox'] {
-  height:100px; 
-  width:100px;
-  appearance:none;
-  display:block;
-  content:url(floorIndication/1-circle-fill.svg);
-  justify-content: center;
-}
-
-#one input[type='checkbox']:hover {
-  content:url(floorIndication/1-circle-fill.svg);
-  justify-content: center;
-}
-
-#one input[type='checkbox']:checked {
-  content:url(floorIndication/1-circle-fill.svg);
-  justify-content: center;
-  background-color: #082C4C;
-}
-#two input[type='checkbox'] {
-  height:100px; 
-  width:100px;
-  appearance:none;
-  display:block;
-  content:url(floorIndication/2-circle-fill.svg);
-  justify-content: center;
-}
-
-#two input[type='checkbox']:hover {
-  content:url(floorIndication/2-circle-fill.svg);
-  justify-content: center;
-}
-
-#two input[type='checkbox']:checked {
-  content:url(floorIndication/2-circle-fill.svg);
-  justify-content: center;
-  background-color: #082C4C;
-}
-#three input[type='checkbox'] {
-  height:100px; 
-  width:100px;
-  appearance:none;
-  display:block;
-  content:url(floorIndication/3-circle-fill.svg);
-  justify-content: center;
-}
-
-#three input[type='checkbox']:hover {
-  content:url(floorIndication/3-circle-fill.svg);
-  justify-content: center;
-}
-
-#three input[type='checkbox']:checked {
-  content:url(floorIndication/3-circle-fill.svg);
-  background-color: #082C4C;
-  justify-content: center;
-}
-
 #DownArrow input[type='checkbox'] {
   content: url(img/arrow-down-square.svg);
   height: 100px;
@@ -263,17 +203,20 @@ header, section, footer, aside, nav, article, figure {
 .grid-container {
   display: grid;
   grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto;
-  padding: 10px;
   overflow: hidden;
 }
 
 .grid-item {
-  padding: 30px;
-  font-size: 30px;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: rgb(59, 59, 59);
   border: 0px solid black;
-  overflow: hidden;
+  padding: 10px;
+}
+
+.grid-item img{
+  max-width: 100%;
 }
 
 .grid-container2 {
@@ -433,13 +376,5 @@ header, section, footer, aside, nav, article, figure {
 
 #closeButton input[type='checkbox']:checked {
   content: url(img/close_t_g.png);
-}
-
-.FloorSign {
-  grid-column-start: 4;
-  grid-column-end: 6;
-  background-color: rgb(59, 59, 59);
-  display: flex;
-  justify-content: center;
 }
 
