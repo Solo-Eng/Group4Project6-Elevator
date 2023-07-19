@@ -8,6 +8,7 @@
 		<meta http-equiv="pragma" content="no-cache" />
 		<link rel="icon" type="image/x-icon" href="img/Spheal.ico">
 		<link rel="stylesheet" type="text/css" href="style1.css">
+		<link rel="stylesheet" type="text/css" href="FloorButtons/FloorButtons.css">
 		<script type="text/javascript" src="script1.js"></script>
 		<script type="text/javascript" src="elevatorControl.js"></script>
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
@@ -99,7 +100,9 @@
 					</div>
 					<div class="grid-item container2" id="one">
 						<form action="index.php" method="POST" Id="floorNumber1">
-							<input type="checkbox" name="newfloor" value="1" onclick="submitNumber1()">
+							<button class="image-button">
+								<img src="img/One.png" alt="Image" Id = "floor1" value = "1">
+							</button>
 						</form>
 					</div>
 					<div class="grid-item"></div>
@@ -112,7 +115,9 @@
 					</div>
 					<div class="grid-item container2" id="two">
 						<form action="index.php" method="POST" Id="floorNumber2">
-							<input type="checkbox" name="newfloor" value="2" onclick="submitNumber2()">
+							<button class="image-button">
+								<img src="img/Two.png" alt="Image" Id = "floor2" value = "2">
+							</button>
 						</form>
 					</div>
 					<div class="grid-item"></div>
@@ -125,7 +130,9 @@
 					</div>
 					<div class="grid-item container2" id="three">
 						<form action="" method="POST" Id="floorNumber3">
-							<input type="checkbox" name="newfloor" value="3" onclick="submitNumber3()">
+							<button class="image-button">
+								<img src="img/Three.png" alt="Image" Id = "floor3" value = "3">
+							</button>
 						</form>
 					</div>
 					<div class="grid-item"></div>
@@ -145,6 +152,7 @@
 					<!-- New Row Start-->
 				</div>
 				<script src="indicatorScript.js"></script>
+				<script type="text/javascript" src="FloorButtons/FloorButtons.js"></script>
 				<p>Wanna know about the developers? <a href="about.html">Click here</a></p><br/>
 				<a href="login.html">Login as security</a>
 			</div>
@@ -174,6 +182,7 @@
 ?>
 <?php 
 	function get_currentFloor(): int {
+		$current_floor = 0;
 		try { $db = new PDO('mysql:host=127.0.0.1;dbname=elevator','ese','ese');}
 		catch (PDOException $e){echo $e->getMessage();}
 

@@ -162,63 +162,6 @@ header, section, footer, aside, nav, article, figure {
   padding-top: 5%;
 }
 
-/*Floor Numbers*/
-
-#one input[type='checkbox'] {
-  height:100px; 
-  width:100px;
-  appearance:none;
-  display:block;
-  content:url(img/One.png);
-  justify-content: center;
-}
-
-#one input[type='checkbox']:hover {
-  content:url(img/One_rev.png);
-  justify-content: center;
-}
-
-#one input[type='checkbox']:checked {
-  content:url(img/One_g.png);
-  justify-content: center;
-}
-#two input[type='checkbox'] {
-  height:100px; 
-  width:100px;
-  appearance:none;
-  display:block;
-  content:url(img/Two.png);
-  justify-content: center;
-}
-
-#two input[type='checkbox']:hover {
-  content:url(img/Two_rev.png);
-  justify-content: center;
-}
-
-#two input[type='checkbox']:checked {
-  content:url(img/Two_g.png);
-  justify-content: center;
-}
-#three input[type='checkbox'] {
-  height:100px; 
-  width:100px;
-  appearance:none;
-  display:block;
-  content:url(img/Three.png);
-  justify-content: center;
-}
-
-#three input[type='checkbox']:hover {
-  content:url(img/Three_rev.png);
-  justify-content: center;
-}
-
-#three input[type='checkbox']:checked {
-  content:url(img/Three_g.png);
-  justify-content: center;
-}
-
 #DownArrow input[type='checkbox'] {
   content: url(img/arrow-down-square.svg);
   height: 100px;
