@@ -35,7 +35,6 @@
 
     function manual_database_update(int $node_ID, int $new_status, int $currentFloor, int $requestedFloor): void{
         // Grab the current date and time
-        // status and nodeID arbitrarily set to 1 (will later be input boxes)
         date_default_timezone_set('America/New_York');
         $date1 = date('Y-m-d');
         $time1 = date('H:i:s');
@@ -82,6 +81,81 @@
         }
     }
 
+    function del_row(int $node_ID): void{
+        $db = new PDO(
+            'mysql:host=127.0.0.1;dbname=elevator',
+            'ese',
+            'ese'
+        );
+
+        $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+
+        // Transaction
+        $db->beginTransaction();
+        try {
+            $query = 'DELETE FROM elevatorNetwork
+            WHERE nodeID = :id';
+
+            $statement = $db->prepare($query);
+            $statement->bindValue('id', $node_ID);
+            $statement->execute();
+
+            // Return # of updated rows
+            $count = $statement->rowCount();
+            if($count == 0){
+                throw new Exception('Error - Database unchanged !!!');
+            }
+            echo "<br/><br/>Database updated<br/><br/>";
+            $db->commit();
+        }
+        catch (Exception $e) {
+            echo $e->getMessage();
+            $db->rollBack();
+        }
+    }
+
+    function new_row(int $node_ID): void{
+        // Grab the current date and time
+        date_default_timezone_set('America/New_York');
+        $date1 = date('Y-m-d');
+        $time1 = date('H:i:s');
+
+        $db = new PDO(
+            'mysql:host=127.0.0.1;dbname=elevator',
+            'ese',
+            'ese'
+        );
+
+        $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+
+        // Transaction
+        $db->beginTransaction();
+        try {
+            $query = 'INSERT INTO elevatorNetwork (date, time, nodeID, status, currentFloor, requestedFloor) 
+                    VALUES (:date,:time,:id,0,0,0)';
+
+            $result=$db->exec($query);
+
+            $statement = $db->prepare($query);
+            $statement->bindValue(':date', $date1);
+            $statement->bindValue(':time', $time1);
+            $statement->bindValue(':id', $node_ID);
+            $statement->execute();
+
+            // Return # of updated rows
+            $count = $statement->rowCount();
+            if($count == 0){
+                throw new Exception('Error - Database unchanged !!!');
+            }
+            echo "<br/><br/>Database updated<br/><br/>";
+            $db->commit();
+        }
+        catch (Exception $e) {
+            echo $e->getMessage();
+            $db->rollBack();
+        }
+    }
+
     function displayDatabase(): void{
         $db = new PDO(
             'mysql:host=127.0.0.1;dbname=elevator',
@@ -112,11 +186,24 @@
         $status = $_POST["status"];
         $cFloor = $_POST["cFloor"];
         $rFloor = $_POST["rFloor"];
+        $newNode = $_POST["newNode"];
+        $delNode = $_POST["delNode"];
+       
 
         if($nodeID != NULL && $status != NULL && $cFloor != NULL && $rFloor != NULL){
+
             manual_database_update($nodeID, $status, $cFloor, $rFloor);
+
         }
-        
+        else if($newNode != NULL){
+            new_row($newNode);
+        }  
+        else if($delNode != NULL){
+            del_row($delNode);
+        }    
+
+
+
         displayDatabase();
 
     }
@@ -144,6 +231,16 @@
 
     <label for="rFloorLabel" class="text_label">Requested Floor:</label>
     <input id="rFloorID" type="number" min="1" max="3" class="text_input" name="rFloor">
+    <br>
+    <br>
+
+    <label for="newNodeLabel" class="text_label">Make new Node:</label>
+    <input id="newNodeID" type="number" class="text_input" name="newNode">
+    <br>
+    <br>
+
+    <label for="delNodeLabel" class="text_label">Delete By Node:</label>
+    <input id="delNodeID" type="number" class="text_input" name="delNode">
 
     <br><br>
     <input type="submit" value="Submit" />
