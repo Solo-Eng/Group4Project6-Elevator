@@ -10,6 +10,7 @@
 		<link rel="stylesheet" type="text/css" href="style1.css">
 		<link rel="stylesheet" type="text/css" href="FloorButtons/FloorButtons.css">
 		<link rel="stylesheet" type="text/css" href="FloorIndication/FloorIndication.css">
+		<link rel="stylesheet" type="text/css" href="UserFloor/UserFloor.css">
 		<script type="text/javascript" src="script1.js"></script>
 		<script type="text/javascript" src="elevatorControl.js"></script>
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
@@ -61,11 +62,21 @@
 				</form>
 				<div class="grid-container">
 					<div class="grid-item"></div>
-					<div class="grid-item"></div>
-					<div class="grid-item"></div>
-					<div class="grid-item FloorSign" id ="FloorNum"><img type="floorIndicator"></div>
-					<div class="grid-item"></div>
-					<div class="grid-item"></div>
+					<div class="grid-item FloorNum" id ="FloorNum1">
+						<button type="button" class="image-button">
+							<img src="img/1-circle-fill.svg" alt="Image">
+						</button>
+					</div>
+					<div class="grid-item FloorNum" id ="FloorNum2">
+						<button type="button" class="image-button">
+							<img src="img\2-circle-fill.svg" alt="Image">
+						</button>
+					</div>
+					<div class="grid-item FloorNum" id ="FloorNum3">
+						<button type="button" class="image-button">
+							<img src="img\3-circle-fill.svg" alt="Image">
+						</button>
+					</div>
 					<div class="grid-item"></div>
 					<div class="grid-item"></div>
 					<div class="grid-item"></div>
@@ -109,7 +120,7 @@
 						<input class="hidablebutton2" id="check2" type="checkbox">
 					</div>
 					<div class="grid-item container2" id="three">
-					<form onclick="return buttonClicked(1,3)" method="POST" Id="floorNumber3" value="3";>
+						<form onclick="return buttonClicked(1,3)" method="POST" Id="floorNumber3" value="3";>
 							<button type="button" class="image-button">
 								<img src="img/Three.png" alt="Image" Id = "floor3">
 							</button>

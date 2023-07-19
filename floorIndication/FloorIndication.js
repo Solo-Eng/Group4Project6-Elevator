@@ -17,24 +17,44 @@ function timedRefresh(){
     });
 }
 function refreshInterval() {    // Automatic updates every 5 s
-    setInterval(timedRefresh, 1000);
+    setInterval(timedRefresh, 100);
 }
 
 var fI = document.querySelector("#floorind"); //change this to floorind when doing images
+var prevFloor = 1;
 
 function indicationImage(floor){
     switch (floor) {
         case "1":
-            fI.src = "img/Elevator_icon_arrow.stop_1.png";
+            if (prevFloor < floor ){
+                fI.src = "img/Elevator_icon_arrow.up_1.png";
+            }
+            else {
+                fI.src = "img/Elevator_icon_arrow.stop_1.png";
+            }
             break;
         case "2":
-            fI.src = "img/Elevator_icon_arrow.stop_2.png";
+            if (prevFloor < floor ){
+                fI.src = "img/Elevator_icon_arrow.up_2.png";
+            }
+            else if (prevFloor > floor) {
+                fI.src = "img/Elevator_icon_arrow.down_2.png";
+            }
+            else {
+                fI.src = "img/Elevator_icon_arrow.stop_2.png";
+            }
             break;
         case "3":
-            fI.src = "img/Elevator_icon_arrow.stop_3.png";
+            if (prevFloor > floor ){
+                fI.src = "img/Elevator_icon_arrow.down_3.png";
+            }
+            else {
+                fI.src = "img/Elevator_icon_arrow.stop_3.png";
+            }
             break;
         default:
     }
+    prevFloor = floor;
 }
 
 window.addEventListener('load', function() {refreshInterval(3000)}, false);
