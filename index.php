@@ -9,6 +9,7 @@
 		<link rel="icon" type="image/x-icon" href="img/Spheal.ico">
 		<link rel="stylesheet" type="text/css" href="style1.css">
 		<link rel="stylesheet" type="text/css" href="FloorButtons/FloorButtons.css">
+		<link rel="stylesheet" type="text/css" href="FloorIndication/FloorIndication.css">
 		<script type="text/javascript" src="script1.js"></script>
 		<script type="text/javascript" src="elevatorControl.js"></script>
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
@@ -74,9 +75,8 @@
 					<div class="grid-item"></div>
 					<div class="grid-item elevator-door door-left"></div>
 					<div class="grid-item elevator-door door-right"></div>
-					<div class="grid-item" id="FloorInd">
-						<!--<img src="img/One.png" alt="Image" id = "floorind">-->
-						<p id = "floorind"></p>
+					<div class="grid-item">
+						<img src="img/Elevator_icon_arrow.stop_1.png" alt="Image" id = "floorind">
 					</div>
 					<div class="grid-item container2" id="one">
 						<form onclick="return buttonClicked(1,1)" method="POST" Id="floorNumber1">

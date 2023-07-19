@@ -25,13 +25,13 @@ var fI = document.querySelector("#floorind"); //change this to floorind when doi
 function indicationImage(floor){
     switch (floor) {
         case "1":
-            fI.innerText = floor;
+            fI.src = "img/Elevator_icon_arrow.stop_1.png";
             break;
         case "2":
-            fI.innerText = floor;
+            fI.src = "img/Elevator_icon_arrow.stop_2.png";
             break;
         case "3":
-            fI.innerText = floor;
+            fI.src = "img/Elevator_icon_arrow.stop_3.png";
             break;
         default:
     }
