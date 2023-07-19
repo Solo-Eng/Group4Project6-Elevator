@@ -11,7 +11,6 @@
 		<link rel="stylesheet" type="text/css" href="FloorButtons/FloorButtons.css">
 		<script type="text/javascript" src="script1.js"></script>
 		<script type="text/javascript" src="elevatorControl.js"></script>
-		<script type="text/javascript" src="floorIndication/FloorIndication.js"></script>
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	</head>
 	<body>
@@ -75,16 +74,14 @@
 					<div class="grid-item"></div>
 					<div class="grid-item elevator-door door-left"></div>
 					<div class="grid-item elevator-door door-right"></div>
-					<div class="grid-item" id="FloorNum">
-						<form action="index.php" method="POST">
-							<input type="number" style="width:50px; height:40px" name="newfloor" max=3 min=1 required />
-							<input type="submit" value="Go"/>
-						</form>
+					<div class="grid-item" id="FloorInd">
+						<!--<img src="img/One.png" alt="Image" id = "floorind">-->
+						<p id = "floorind"></p>
 					</div>
 					<div class="grid-item container2" id="one">
 						<form onclick="return buttonClicked(1,1)" method="POST" Id="floorNumber1">
 							<button type="button" class="image-button">
-								<img src="img/One.png" alt="Image" Id = "floor1">
+								<img src="img/One.png" alt="Image" id = "floor1">
 							</button>
 						</form>
 					</div>
@@ -134,7 +131,8 @@
 					<div class="grid-item"></div>
 					<!-- New Row Start-->
 				</div>
-				<script src="indicatorScript.js"></script>
+				<script src="floorIndication/indicatorScript.js"></script>
+				<script type="text/javascript" src="floorIndication/FloorIndication.js"></script>
 				<script type="text/javascript" src="FloorButtons/FloorButtons.js"></script>
 				<p>Wanna know about the developers? <a href="about.html">Click here</a></p><br/>
 				<a href="login.html">Login as security</a>

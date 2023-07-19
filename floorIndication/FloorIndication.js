@@ -8,6 +8,7 @@ function timedRefresh(){
           // This function will be called when the AJAX request succeeds
           console.log("Current Floor: " + response);
           //call function to handle response
+          indicationImage(response);
         },
         error: function(jqXHR, textStatus, errorThrown) {
           // This function will be called if there's an error in the AJAX request
@@ -17,6 +18,23 @@ function timedRefresh(){
 }
 function refreshInterval() {    // Automatic updates every 5 s
     setInterval(timedRefresh, 1000);
+}
+
+var fI = document.querySelector("#floorind"); //change this to floorind when doing images
+
+function indicationImage(floor){
+    switch (floor) {
+        case "1":
+            fI.innerText = floor;
+            break;
+        case "2":
+            fI.innerText = floor;
+            break;
+        case "3":
+            fI.innerText = floor;
+            break;
+        default:
+    }
 }
 
 window.addEventListener('load', function() {refreshInterval(3000)}, false);
