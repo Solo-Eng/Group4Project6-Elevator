@@ -99,9 +99,9 @@
 						</form>
 					</div>
 					<div class="grid-item container2" id="one">
-						<form action="index.php" method="POST" Id="floorNumber1">
+						<form onclick="return buttonClicked(this)" method="POST" Id="floorNumber1" value="1";>
 							<button class="image-button">
-								<img src="img/One.png" alt="Image" Id = "floor1" value = "1">
+								<img src="img/One.png" alt="Image" Id = "floor1">
 							</button>
 						</form>
 					</div>
@@ -114,9 +114,9 @@
 						<input class="hidablebutton1" id="check1" type="checkbox">
 					</div>
 					<div class="grid-item container2" id="two">
-						<form action="index.php" method="POST" Id="floorNumber2">
+					<form onclick="return buttonClicked(this)" method="POST" Id="floorNumber2" value="2";>
 							<button class="image-button">
-								<img src="img/Two.png" alt="Image" Id = "floor2" value = "2">
+								<img src="img/Two.png" alt="Image" Id = "floor2">
 							</button>
 						</form>
 					</div>
@@ -129,9 +129,9 @@
 						<input class="hidablebutton2" id="check2" type="checkbox">
 					</div>
 					<div class="grid-item container2" id="three">
-						<form action="" method="POST" Id="floorNumber3">
+					<form onclick="return buttonClicked(this)" method="POST" Id="floorNumber3" value="3";>
 							<button class="image-button">
-								<img src="img/Three.png" alt="Image" Id = "floor3" value = "3">
+								<img src="img/Three.png" alt="Image" Id = "floor3">
 							</button>
 						</form>
 					</div>

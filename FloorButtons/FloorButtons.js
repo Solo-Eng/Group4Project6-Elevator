@@ -1,6 +1,7 @@
 f1 = document.getElementById("floor1");
 f2 = document.getElementById("floor2");
 f3 = document.getElementById("floor3");
+var clicked = false;
 
 //event listeners to change the image when moused over
 f1.addEventListener("mouseover", function () {
@@ -34,6 +35,7 @@ f3.addEventListener("mouseout", function () {
 });
 
 function hoverImage(floor){
+    clicked = false;
     console.log("Detected Hover: " + floor);
     switch(floor) {
         case 1:
@@ -51,6 +53,7 @@ function hoverImage(floor){
 }
 
 function activeImage(floor) {
+    clicked = true;
     console.log("Detected Click: " + floor);
     switch(floor) {
         case 1:
@@ -69,17 +72,35 @@ function activeImage(floor) {
 
 function resetImage(floor) {
     console.log("Detected Reset: " + floor);
-    switch(floor) {
-        case 1:
-            f1.src = "img/One.png";
-            break;
-        case 2:
-            f2.src = "img/Two.png";
-            break;
-        case 3:
-            f3.src = "img/Three.png";
-            break;
-        default:
-            
+    if (clicked == false){
+        switch(floor) {
+            case 1:
+                f1.src = "img/One.png";
+                break;
+            case 2:
+                f2.src = "img/Two.png";
+                break;
+            case 3:
+                f3.src = "img/Three.png";
+                break;
+            default:
+        }
     }
+    else {
+        //until we can read the current floor
+        clicked = false;
+        setTimeout(function () {
+            resetImage(floor);
+        }, 2000);
+    }
+}
+
+function buttonClicked(obj){
+    //posts async
+    $.post("index.php",
+    $(obj).serialize(),
+    function(data) {
+    }
+    );
+    return false;
 }
