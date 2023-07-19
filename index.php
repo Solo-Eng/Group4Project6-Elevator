@@ -62,6 +62,7 @@
 						$curFlr = get_currentFloor();
 						echo "<h2>Current floor # $curFlr </h2>";			
 					?>
+					<p id="floorValue"></p>
 					<!--Pressing the Submit button will submit this to the form-->
 					<input type="submit" value="Submit">
 	
@@ -99,8 +100,8 @@
 						</form>
 					</div>
 					<div class="grid-item container2" id="one">
-						<form onclick="return buttonClicked(this)" method="POST" Id="floorNumber1" value="1";>
-							<button class="image-button">
+						<form onclick="return buttonClicked(1,1)" method="POST" Id="floorNumber1">
+							<button type="button" class="image-button">
 								<img src="img/One.png" alt="Image" Id = "floor1">
 							</button>
 						</form>
@@ -114,8 +115,8 @@
 						<input class="hidablebutton1" id="check1" type="checkbox">
 					</div>
 					<div class="grid-item container2" id="two">
-					<form onclick="return buttonClicked(this)" method="POST" Id="floorNumber2" value="2";>
-							<button class="image-button">
+					<form onclick="return buttonClicked(1,2)" method="POST" Id="floorNumber2">
+							<button type="button" class="image-button">
 								<img src="img/Two.png" alt="Image" Id = "floor2">
 							</button>
 						</form>
@@ -129,8 +130,8 @@
 						<input class="hidablebutton2" id="check2" type="checkbox">
 					</div>
 					<div class="grid-item container2" id="three">
-					<form onclick="return buttonClicked(this)" method="POST" Id="floorNumber3" value="3";>
-							<button class="image-button">
+					<form onclick="return buttonClicked(1,3)" method="POST" Id="floorNumber3" value="3";>
+							<button type="button" class="image-button">
 								<img src="img/Three.png" alt="Image" Id = "floor3">
 							</button>
 						</form>
@@ -162,24 +163,6 @@
   	</body>
 </html>
 
-<?php
-	function update_elevatorNetwork(int $node_ID, int $new_floor =1): int {
-		$db1 = new PDO('mysql:host=127.0.0.1;dbname=elevator','ese','ese');
-		$query = 'UPDATE elevatorNetwork 
-				SET currentFloor = :floor
-				WHERE nodeID = :id';
-		$json = filter_input(INPUT_POST, 'json');
-		$decoded_json = json_decode($json);
-		echo $decoded_json;
-		echo $new_floor;
-		$statement = $db1->prepare($query);
-		$statement->bindvalue('floor', $new_floor);
-		$statement->bindvalue('id', $node_ID);
-		$statement->execute();	
-		
-		return $new_floor;
-	}
-?>
 <?php 
 	function get_currentFloor(): int {
 		$current_floor = 0;

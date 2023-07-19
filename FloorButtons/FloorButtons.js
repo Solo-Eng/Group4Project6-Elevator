@@ -95,12 +95,18 @@ function resetImage(floor) {
     }
 }
 
-function buttonClicked(obj){
-    //posts async
-    $.post("index.php",
-    $(obj).serialize(),
-    function(data) {
-    }
-    );
-    return false;
+function buttonClicked(node_ID, new_floor){
+    $.ajax({
+        type: "POST", // Use POST method
+        url: "FloorButtons/FloorSubmit.php",
+        data: { node_ID: node_ID, new_floor: new_floor }, // Data to send to the server
+        success: function(response) {
+          // This function will be called when the AJAX request succeeds
+          console.log("New floor updated: " + response);
+        },
+        error: function(jqXHR, textStatus, errorThrown) {
+          // This function will be called if there's an error in the AJAX request
+          console.error("AJAX request failed: " + textStatus, errorThrown);
+        }
+    });
 }
