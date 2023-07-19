@@ -11,6 +11,7 @@
 		<link rel="stylesheet" type="text/css" href="FloorButtons/FloorButtons.css">
 		<script type="text/javascript" src="script1.js"></script>
 		<script type="text/javascript" src="elevatorControl.js"></script>
+		<script type="text/javascript" src="floorIndication/FloorIndication.js"></script>
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	</head>
 	<body>
@@ -53,16 +54,7 @@
 					<label for="floor2">Floor 2</label><br>  
 					<input type="radio" id="floor3Select" name="floor" value="3">
 					<label for="floor3">Floor 3</label><br><br>
-			
-					<?php
-						if(isset($_POST['newfloor'])) {
-						$curFlr = update_elevatorNetwork(1, $_POST['newfloor']); 
-						header('Refresh:0; url=index.php');	
-						} 
-						$curFlr = get_currentFloor();
-						echo "<h2>Current floor # $curFlr </h2>";			
-					?>
-					<p id="floorValue"></p>
+
 					<!--Pressing the Submit button will submit this to the form-->
 					<input type="submit" value="Submit">
 	
@@ -71,17 +63,7 @@
 					<div class="grid-item"></div>
 					<div class="grid-item"></div>
 					<div class="grid-item"></div>
-					<div class="grid-item FloorSign" id ="FloorNum"><img type="floorIndicator">
-						<?php
-							#php is for changing the icon depending on the current floor...only if the user pushed a button
-							if ($curFlr == 1){
-								#perform the javascript for the 1st floor
-								?>
-								<script></script>
-								<?php
-							}
-						?>
-					</div>
+					<div class="grid-item FloorSign" id ="FloorNum"><img type="floorIndicator"></div>
 					<div class="grid-item"></div>
 					<div class="grid-item"></div>
 					<div class="grid-item"></div>
@@ -162,19 +144,4 @@
     	</div>
   	</body>
 </html>
-
-<?php 
-	function get_currentFloor(): int {
-		$current_floor = 0;
-		try { $db = new PDO('mysql:host=127.0.0.1;dbname=elevator','ese','ese');}
-		catch (PDOException $e){echo $e->getMessage();}
-
-			// Query the database to display current floor
-			$rows = $db->query('SELECT currentFloor FROM elevatorNetwork');
-			foreach ($rows as $row) {
-				$current_floor = $row[0];
-			}
-			return $current_floor;
-	}
-?>
 
