@@ -1,0 +1,13 @@
+/*Floor Numbers*/
+.image-button {
+    padding-bottom: 5%;
+    padding-top: 5%;
+    background: transparent;
+    border: none;
+    display:block;
+    cursor: pointer;
+  }
+  .image-button img {
+    height:100px; 
+    width:100px;
+  }
