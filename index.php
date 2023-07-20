@@ -1,4 +1,17 @@
 <!DOCTYPE html>
+	<?php
+		require ('functions.php');
+		session_start();    
+		if (!isset($_SESSION['username']))	{
+			header('Location: login.html');
+			exit(); // <-- terminates the current script
+		}
+	?>	
+	<?php
+		if (isset($_SESSION['username']))	{
+			echo "<h3>Welcome " . $_SESSION['username'] . "! You have reached the elevator controlling page!</h3>";
+		}
+	?>
 <html>
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -44,6 +57,22 @@
 
 				<!-- The UI for the elevator-->
 				<h3>Elevator UI</h3>
+				<p>Please pick your floor:</p>
+
+				<form action="floorDatabase.php" method="post" id="floorSelect">
+
+					<!-- Designated type, ID, name, and value for each button-->
+					<input type="radio" id="floor1Select" name="floor" value="1" checked="checked">
+					<label for="floor1">Floor 1</label><br>
+					<input type="radio" id="floor2Select" name="floor" value="2">
+					<label for="floor2">Floor 2</label><br>  
+					<input type="radio" id="floor3Select" name="floor" value="3">
+					<label for="floor3">Floor 3</label><br><br>
+
+					<!--Pressing the Submit button will submit this to the form-->
+					<input type="submit" value="Submit">
+	
+				</form>
 				<div class="grid-container">
 					<div class="grid-item"></div>
 					<div class="grid-item FloorNum" id ="FloorNum1">
@@ -89,9 +118,9 @@
 						<input class="hidablebutton1" id="check1" type="checkbox">
 					</div>
 					<div class="grid-item container2" id="two">
-					<form onclick="return buttonClicked(1,2)" method="POST" id="floorNumber2">
+					<form onclick="return buttonClicked(1,2)" method="POST" Id="floorNumber2">
 							<button type="button" class="image-button">
-								<img src="img/Two.png" alt="Image" id = "floor2">
+								<img src="img/Two.png" alt="Image" Id = "floor2">
 							</button>
 						</form>
 					</div>
@@ -104,9 +133,9 @@
 						<input class="hidablebutton2" id="check2" type="checkbox">
 					</div>
 					<div class="grid-item container2" id="three">
-						<form onclick="return buttonClicked(1,3)" method="POST" id="floorNumber3" value="3";>
+						<form onclick="return buttonClicked(1,3)" method="POST" Id="floorNumber3" value="3";>
 							<button type="button" class="image-button">
-								<img src="img/Three.png" alt="Image" id = "floor3">
+								<img src="img/Three.png" alt="Image" Id = "floor3">
 							</button>
 						</form>
 					</div>
@@ -126,11 +155,12 @@
 					<div class="grid-item"></div>
 					<!-- New Row Start-->
 				</div>
+				<script src="floorIndication/indicatorScript.js"></script>
 				<script type="text/javascript" src="floorIndication/FloorIndication.js"></script>
 				<script type="text/javascript" src="FloorButtons/FloorButtons.js"></script>
 				<script type="text/javascript" src="UserFloor/UserFloor.js"></script>
 				<p>Wanna know about the developers? <a href="about.html">Click here</a></p><br/>
-				<a href="login.html">Login as security</a>
+				<a href="php/logout.php">Log Out</a>
 			</div>
 			<footer id="foot">placeholder</footer>
 			<script src="time.js"></script>
