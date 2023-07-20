@@ -1,9 +1,10 @@
 //read current floor based on a timer
 function timedRefresh(){
+    var timestamp = new Date().getTime(); // Generate a unique timestamp
     $.ajax({
         type: "POST", // Use POST method
         url: "floorIndication/FloorIndication.php",
-        data: {}, // Data to send to the server
+        data: { timestamp: timestamp },
         success: function(response) {
           // This function will be called when the AJAX request succeeds
           console.log("Current Floor: " + response);
