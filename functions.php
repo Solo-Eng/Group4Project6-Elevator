@@ -7,7 +7,7 @@
 
 		$db1 = new PDO('mysql:host=127.0.0.1;dbname=elevator','ese','ese');
 		$query = 'UPDATE elevatorNetwork 
-				SET currentFloor = :floor,
+				SET requestedFloor = :floor,
 				date = :date1,
                 time = :time1
 				WHERE nodeID = :id';
