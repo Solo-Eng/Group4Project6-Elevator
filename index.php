@@ -9,7 +9,7 @@
 		<link rel="icon" type="image/x-icon" href="img/Spheal.ico">
 		<link rel="stylesheet" type="text/css" href="style1.css">
 		<link rel="stylesheet" type="text/css" href="FloorButtons/FloorButtons.css">
-		<link rel="stylesheet" type="text/css" href="FloorIndication/FloorIndication.css">
+		<link rel="stylesheet" type="text/css" href="floorIndication/FloorIndication.css">
 		<link rel="stylesheet" type="text/css" href="UserFloor/UserFloor.css">
 		<script type="text/javascript" src="script1.js"></script>
 		<script type="text/javascript" src="elevatorControl.js"></script>
