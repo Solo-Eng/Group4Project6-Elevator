@@ -56,7 +56,7 @@ int main() {
 					// Calculate the difference between 2nd and 3rd positions
 					diff1 = floorNumArray[2] - floorNumArray[1];
 					diff1 = abs(diff1);
-
+					
 										
 					// a printf for debugging
 					printf("\n%d %d %d\n",floorNumArray[0],floorNumArray[1],floorNumArray[2]);
@@ -73,7 +73,7 @@ int main() {
 							
 
 
-							dist = getDistance();
+							
 							if(diff2 > 0){
 								//going up
 								if(dist < 1000){
@@ -107,7 +107,9 @@ int main() {
 								// Wait for new passengers
 								// Continue with request
 								sleep(2);								
-								pcanTx(ID_SC_TO_EC, HexFromFloor(floorNumArray[1]));						
+								pcanTx(ID_SC_TO_EC, HexFromFloor(floorNumArray[1]));	
+								sleep(1);	
+								db_setFloorNum(floorNumArray[1]);				
 
 								// make sure tf = 0;
 								tf = 0;	
@@ -123,7 +125,18 @@ int main() {
 					
 					// Set the database
 					// Will set currentFloor in the database
-					db_setFloorNum(floorNumArray[0]);
+					
+					// EXPERIMENTAL //					
+					if(dist > 570 && dist < 580){
+						db_setFloorNum(1);
+					}
+					else if(dist > 580 && dist < 850){
+						db_setFloorNum(2);
+					}
+					else if(dist >1160 && dist < 1180){
+						db_setFloorNum(3);
+					}
+					
 
 					// shift the queue
 					floorNumArray[2] = floorNumArray[1];
