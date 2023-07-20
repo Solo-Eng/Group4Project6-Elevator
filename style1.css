@@ -303,12 +303,12 @@ header, section, footer, aside, nav, article, figure {
 .door-left.open img{
   z-index: -1;
   content:url(insideElevator.png);
-  position: absolute;
+  position:absolute;
   overflow:hidden;
   height: 57%;
   width: 46%;
   animation: none;
-  top: 690px! important;
+  top: 695px !important;
   left: 185px !important;
   border: none !important;
 }
@@ -320,7 +320,7 @@ header, section, footer, aside, nav, article, figure {
   height: 57%;
   width: 46%;
   animation: none;
-  top: 690px! important;
+  top: 695px !important;
   left: 185px !important;
   border: none !important;
 }
