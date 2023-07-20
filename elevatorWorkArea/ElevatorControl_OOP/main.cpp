@@ -50,10 +50,13 @@ int main() {
 				while(1){
 					// Take the requested Floor from the database			
 					floorNumArray[0] = db_getFloorNum();	
+
+					dist = getDistance();
 					
 					// Calculate the difference between 2nd and 3rd positions
 					diff1 = floorNumArray[2] - floorNumArray[1];
 					diff1 = abs(diff1);
+
 										
 					// a printf for debugging
 					printf("\n%d %d %d\n",floorNumArray[0],floorNumArray[1],floorNumArray[2]);
