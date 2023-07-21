@@ -134,33 +134,6 @@ header, section, footer, aside, nav, article, figure {
   }
 }
 
-#Circle1 img[type="floorIndicator"]{
-  height:100px; 
-  width:100px;
-  appearance:none;
-  display:block;
-  content:url(floorIndication/1-circle-fill.svg);
-  padding-bottom: 5%;
-  padding-top: 5%;
-}
-#Circle2 img[type="floorIndicator"]{
-  height:100px; 
-  width:100px;
-  appearance:none;
-  display:block;
-  content:url(floorIndication/2-circle-fill.svg);
-  padding-bottom: 5%;
-  padding-top: 5%;
-}
-#Circle3 img[type="floorIndicator"]{
-  height:100px; 
-  width:100px;
-  appearance:none;
-  display:block;
-  content:url(floorIndication/3-circle-fill.svg);
-  padding-bottom: 5%;
-  padding-top: 5%;
-}
 #DownArrow input[type='checkbox'] {
   content: url(img/arrow-down-square.svg);
   height: 100px;
