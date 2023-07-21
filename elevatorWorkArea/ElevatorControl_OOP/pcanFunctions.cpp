@@ -75,12 +75,21 @@ int pcanRx(int num_msgs){
 			printf("Error 0x%x\n", (int)status);
 			//break;
 		}
+
+		// Reform bytes 1 and 2 back into the same integer
+		// byte [1] is the low byte
+		// byte [2] is the high byte
+
+		unsigned int combinedInteger;
+		combinedInteger = (Rxmsg.DATA[2] << 8) | Rxmsg.DATA[1];
+
 										
 		if(Rxmsg.ID != 0x01 && Rxmsg.LEN != 0x04) {		// Ignore status message on bus	
-			printf("  - R ID:%4x LEN:%1x DATA:%02x \n",	// Display the CAN message
+			printf("  - R ID:%4x LEN:%1x DATA:%02x DIST: %d\n",	// Display the CAN message
 				(int)Rxmsg.ID, 
 				(int)Rxmsg.LEN,
-				(int)Rxmsg.DATA[0]);
+				(int)Rxmsg.DATA[0],
+				combinedInteger);
 		i++;
 		}
 	}
@@ -134,10 +143,12 @@ int getDistance(){
 	CAN_Close(h2);
 	//printf("\nEnd Rx\n");
 
-	/*unsigned char lowByte = dist & 0xFF;
-  	txdata[1] = lowByte;
-  	unsigned char highByte = (dist >> 8) & 0xFF;
-  	txdata[2] = highByte;*/
+	// Reform bytes 1 and 2 back into the same integer
+	// byte [1] is the low byte
+	// byte [2] is the high byte
 
-	return ( (int)Rxmsg.DATA[1] + (int)Rxmsg.DATA[2]);						// Return the last value received
+	unsigned int combinedInteger;
+	combinedInteger = (Rxmsg.DATA[2] << 8) | Rxmsg.DATA[1];
+
+	return (combinedInteger);						// Return the last value received
 }
