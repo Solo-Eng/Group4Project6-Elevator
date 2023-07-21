@@ -55,11 +55,10 @@ int main() {
 					
 					// Calculate the difference between 2nd and 3rd positions
 					diff1 = floorNumArray[2] - floorNumArray[1];
-					diff1 = abs(diff1);
-					
+					diff1 = abs(diff1);				
 										
 					// a printf for debugging
-					printf("\n%d %d %d\n",floorNumArray[0],floorNumArray[1],floorNumArray[2]);
+					printf("\n%d %d %d %d\n",floorNumArray[0],floorNumArray[1],floorNumArray[2], dist);
 
 					// First check if the was a change in requested floors from 1 to 2
 					if(floorNumArray[1] != floorNumArray[0]){
@@ -71,12 +70,9 @@ int main() {
 							// Also gives direction of elevator
 							diff2 = floorNumArray[1] - floorNumArray[0];
 							
-
-
-							
 							if(diff2 > 0){
 								//going up
-								if(dist < 1000){
+								if(dist < 720){
 									// hasn't passed floor 2
 									tf =1;
 								}
@@ -87,7 +83,7 @@ int main() {
 							}
 							else if(diff2 < 0){
 								//going down
-								if(dist > 500){
+								if(dist > 590){
 									// hasn't passed floor 2
 									tf =1;
 								}
@@ -127,13 +123,13 @@ int main() {
 					// Will set currentFloor in the database
 					
 					// EXPERIMENTAL //					
-					if(dist > 570 && dist < 580){
+					if(dist > 390 && dist < 450){
 						db_setFloorNum(1);
 					}
-					else if(dist > 580 && dist < 850){
+					else if(dist > 590 && dist < 720){
 						db_setFloorNum(2);
 					}
-					else if(dist >1160 && dist < 1180){
+					else if(dist >1220 && dist < 1350){
 						db_setFloorNum(3);
 					}
 					
