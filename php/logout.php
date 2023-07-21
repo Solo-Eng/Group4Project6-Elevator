@@ -3,7 +3,7 @@
     session_start();
     session_destroy();
 
-    echo "You logged out. <a href='../index.html'>Return to home</a>";
+    echo "You logged out. <a href='../'>Return to home</a>";
 
 
 ?>
