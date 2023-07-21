@@ -1,4 +1,5 @@
 var f1, f2, f3;
+var userFloor = 1;
 
 // Event listeners looking at each of the buttons
 
@@ -20,6 +21,7 @@ window.onload = function floor0(){
 }
 
 function floor1(){
+	userFloor = 1;
 	document.getElementById('UpArrow').style.paddingBottom = '10px';
 	document.getElementById('DownArrow').style.paddingTop = '116px';
 	document.getElementById('check1').style.display = 'inherit';
@@ -28,6 +30,7 @@ function floor1(){
 }
 
 function floor2(){
+	userFloor = 2;
 	document.getElementById('UpArrow').style.paddingBottom = '10px';
 	document.getElementById('DownArrow').style.paddingTop = '10px';
 	document.getElementById('check1').style.display = 'inherit';
@@ -36,6 +39,7 @@ function floor2(){
 }
 
 function floor3(){
+	userFloor = 3;
 	document.getElementById('UpArrow').style.paddingBottom = '116px';
 	document.getElementById('DownArrow').style.paddingTop = '10px';
 	document.getElementById('check1').style.display = 'none';

@@ -1,0 +1,52 @@
+/*#DownArrow input[type='checkbox'] {
+    content: url(img/arrow-down-square.svg);
+    height: 100px;
+    width: 100px;
+    appearance: none;
+    display: block;
+    justify-content: center;
+  }
+  
+  #DownArrow input[type='checkbox']:hover {
+    content: url(img/arrow-down-square-fill.svg);
+    justify-content: center;
+  }
+  
+  #DownArrow input[type='checkbox']:checked {
+    content: url(img/arrow-down-green.png);
+    justify-content: center;
+  }
+  
+  #UpArrow input[type='checkbox'] {
+    height: 100px;
+    width: 100px;
+    appearance: none;
+    display: block;
+    content: url(img/arrow-up-square.svg);
+    justify-content: center;
+  }
+  
+  #UpArrow input[type='checkbox']:hover {
+    content: url(img/arrow-up-square-fill.svg);
+    justify-content: center;
+  }
+  
+  #UpArrow input[type='checkbox']:checked {
+    content: url(img/arrow-up-green.png);
+    justify-content: center;
+  }
+
+*/
+/*Floor Numbers*/
+/*.image-button {
+    padding-bottom: 5%;
+    padding-top: 5%;
+    background: transparent;
+    border: none;
+    display:block;
+    cursor: pointer;
+  }
+  .image-button img {
+    height:100px; 
+    width:100px;
+  }*/
