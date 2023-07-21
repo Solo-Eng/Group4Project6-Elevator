@@ -161,67 +161,6 @@ header, section, footer, aside, nav, article, figure {
   padding-bottom: 5%;
   padding-top: 5%;
 }
-
-/*Floor Numbers*/
-
-#one input[type='checkbox'] {
-  height:100px; 
-  width:100px;
-  appearance:none;
-  display:block;
-  content:url(floorIndication/1-circle-fill.svg);
-  justify-content: center;
-}
-
-#one input[type='checkbox']:hover {
-  content:url(floorIndication/1-circle-fill.svg);
-  justify-content: center;
-}
-
-#one input[type='checkbox']:checked {
-  content:url(floorIndication/1-circle-fill.svg);
-  justify-content: center;
-  background-color: #082C4C;
-}
-#two input[type='checkbox'] {
-  height:100px; 
-  width:100px;
-  appearance:none;
-  display:block;
-  content:url(floorIndication/2-circle-fill.svg);
-  justify-content: center;
-}
-
-#two input[type='checkbox']:hover {
-  content:url(floorIndication/2-circle-fill.svg);
-  justify-content: center;
-}
-
-#two input[type='checkbox']:checked {
-  content:url(floorIndication/2-circle-fill.svg);
-  justify-content: center;
-  background-color: #082C4C;
-}
-#three input[type='checkbox'] {
-  height:100px; 
-  width:100px;
-  appearance:none;
-  display:block;
-  content:url(floorIndication/3-circle-fill.svg);
-  justify-content: center;
-}
-
-#three input[type='checkbox']:hover {
-  content:url(floorIndication/3-circle-fill.svg);
-  justify-content: center;
-}
-
-#three input[type='checkbox']:checked {
-  content:url(floorIndication/3-circle-fill.svg);
-  background-color: #082C4C;
-  justify-content: center;
-}
-
 #DownArrow input[type='checkbox'] {
   content: url(img/arrow-down-square.svg);
   height: 100px;

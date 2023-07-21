@@ -24,6 +24,7 @@
 		<link rel="stylesheet" type="text/css" href="FloorButtons/FloorButtons.css">
 		<link rel="stylesheet" type="text/css" href="floorIndication/FloorIndication.css">
 		<link rel="stylesheet" type="text/css" href="UserFloor/UserFloor.css">
+		<link rel="stylesheet" type="text/css" href="CallElevator/CallElevator.css">
 		<script type="text/javascript" src="script1.js"></script>
 		<script type="text/javascript" src="elevatorControl.js"></script>
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
@@ -159,6 +160,8 @@
 				<script type="text/javascript" src="floorIndication/FloorIndication.js"></script>
 				<script type="text/javascript" src="FloorButtons/FloorButtons.js"></script>
 				<script type="text/javascript" src="UserFloor/UserFloor.js"></script>
+				<!--Below is REQUIRED to be below FloorButtons and UserFloor-->
+				<script type="text/javascript" src="CallElevator/CallElevator.js"></script>
 				<p>Wanna know about the developers? <a href="about.html">Click here</a></p><br/>
 				<a href="php/logout.php">Log Out</a>
 			</div>
