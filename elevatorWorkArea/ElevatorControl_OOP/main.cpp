@@ -65,7 +65,7 @@ int main() {
 
 						// Check if the difference between floors is large
 						// If so, the floor-2-stop is possible
-						if ( (diff1 == 2) && ()){
+						if ( (diff1 == 2) ){
 							// Calculate the difference between the first 2 
 							// Also gives direction of elevator
 							diff2 = floorNumArray[1] - floorNumArray[0];
@@ -96,7 +96,7 @@ int main() {
 
 							// Make sure the difference between the newest floor
 							// and the previous floor is short
-							if(diff2 == 1){
+							if( (diff2 == 1) && (tf == 1) ){
 								// Send car to the new floor
 								pcanTx(ID_SC_TO_EC, HexFromFloor(floorNumArray[0]));
 								
