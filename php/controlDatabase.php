@@ -167,7 +167,7 @@
         $rows = $db->query($query);
         echo "| &nbsp;&nbsp; DATE &nbsp; &nbsp;&nbsp;&nbsp;
         | &nbsp;&nbsp;&nbsp;TIME &nbsp;&nbsp;
-        | NODEID | STATUS | CURRENT FLOOR | REQUESTED FLOOR |<br>";
+        | NODEID | STATUS | CURRENT FLOOR | REQUESTED FLOOR | DISTANCE |<br>";
         foreach($rows as $row){
             echo "<pre>| " . $row['date'] . " | " . $row['time'] . " |    " . 
                   $row["nodeID"] . 
@@ -176,7 +176,8 @@
                   "    |         " . 
                   $row["currentFloor"] . 
                   "          |           " 
-                  . $row["requestedFloor"] . "           |</pre>";
+                  . $row["requestedFloor"] . "           |    "
+                  . $row["otherInfo"] . "    |</pre>";
         }
         
     }
