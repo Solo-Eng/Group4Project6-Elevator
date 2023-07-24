@@ -60,20 +60,6 @@
 				<h3>Elevator UI</h3>
 				<p>Please pick your floor:</p>
 
-				<form action="floorDatabase.php" method="post" id="floorSelect">
-
-					<!-- Designated type, ID, name, and value for each button-->
-					<input type="radio" id="floor1Select" name="floor" value="1" checked="checked">
-					<label for="floor1">Floor 1</label><br>
-					<input type="radio" id="floor2Select" name="floor" value="2">
-					<label for="floor2">Floor 2</label><br>  
-					<input type="radio" id="floor3Select" name="floor" value="3">
-					<label for="floor3">Floor 3</label><br><br>
-
-					<!--Pressing the Submit button will submit this to the form-->
-					<input type="submit" value="Submit">
-	
-				</form>
 				<div class="grid-container">
 					<div class="grid-item"></div>
 					<div class="grid-item FloorNum" id ="FloorNum1">
