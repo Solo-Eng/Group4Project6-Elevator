@@ -91,11 +91,17 @@ var audio1 = new Audio('floor1.mp3');
 var audio2 = new Audio('floor2.mp3');
 var audio3 = new Audio('floor3.mp3');
 
+var tts1 = new Audio('BrianFloor1.mp3');
+var tts2 = new Audio('BrianFloor2.mp3');
+var tts3 = new Audio('BrianFloor3.mp3');
+
 function floorTraversing(floor){
     
     switch(floor) {
         case "1":
             //play audio
+            tts1.currentTime=0;
+            tts1.play();
             audio1.play();
             audio2.pause();
             audio2.currentTime=0;
@@ -104,6 +110,8 @@ function floorTraversing(floor){
             break;
         case "2":
             //play audio
+            tts2.currentTime=0;
+            tts2.play();
             audio2.play();
             audio1.pause();
             audio1.currentTime=0;
@@ -112,6 +120,8 @@ function floorTraversing(floor){
             break;
         case "3":
             //play audio
+            tts3.currentTime=0;
+            tts3.play();
             audio3.play();
             audio1.pause();
             audio1.currentTime=0;
