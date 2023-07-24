@@ -90,7 +90,7 @@
 							<img src="img\3-circle-fill.svg" alt="Image">
 						</button>
 					</div>
-					<div class="grid-item"></div>
+					<div class="grid-item SabbathButton" id = "Sabbath"><button type="Sabbath">Sabbath Mode ON</button></div>
 					<div class="grid-item"></div>
 					<div class="grid-item"></div>
 					<div class="grid-item"></div>
