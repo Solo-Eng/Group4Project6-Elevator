@@ -26,6 +26,7 @@
 		<link rel="stylesheet" type="text/css" href="CallElevator/CallElevator.css">
 		<script type="text/javascript" src="script1.js"></script>
 		<script type="text/javascript" src="elevatorControl.js"></script>
+		
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	</head>
 	<body>
@@ -77,27 +78,32 @@
 					<div class="grid-item"></div>
 					<div class="grid-item FloorNum" id ="FloorNum1">
 						<button type="button" class="image-button">
-							<img src="img/1-circle-fill.svg" alt="Image">
+							<img src="floorIndication/1-circle-fill.svg" alt="Image">
 						</button>
 					</div>
 					<div class="grid-item FloorNum" id ="FloorNum2">
 						<button type="button" class="image-button">
-							<img src="img\2-circle-fill.svg" alt="Image">
+							<img src="floorIndication\2-circle-fill.svg" alt="Image">
 						</button>
 					</div>
 					<div class="grid-item FloorNum" id ="FloorNum3">
 						<button type="button" class="image-button">
-							<img src="img\3-circle-fill.svg" alt="Image">
+							<img src="floorIndication\3-circle-fill.svg" alt="Image">
 						</button>
 					</div>
-					<div class="grid-item SabbathButton" id = "Sabbath"><button type="Sabbath">Sabbath Mode ON</button></div>
+					<div class="grid-item SabbathButton" id = "Sabbath">
+						<button type="button" class= "Sabbath" id="SabbathID">
+							Sabbath Mode
+							<!--<img src="" alt="Image">-->
+						</button>
+					</div>
 					<div class="grid-item"></div>
 					<div class="grid-item"></div>
 					<div class="grid-item"></div>
 					<div class="grid-item"></div>
 					<!-- New Row Start-->
 					<div class="grid-item"></div>
-					<div class="grid-item elevator-door door-left"></div>
+					<div class="grid-item elevator-door door-left"><img class="grid-item elevator-door door-left"/></div>
 					<div class="grid-item elevator-door door-right"></div>
 					<div class="grid-item">
 						<img src="img/Elevator_icon_arrow.stop_1.png" alt="Image" id = "floorind">
@@ -155,9 +161,9 @@
 					<div class="grid-item"></div>
 					<!-- New Row Start-->
 				</div>
-				<script src="floorIndication/indicatorScript.js"></script>
 				<script type="text/javascript" src="floorIndication/FloorIndication.js"></script>
 				<script type="text/javascript" src="FloorButtons/FloorButtons.js"></script>
+				<script type="text/javascript" src="Sabbath.js"></script>
 				<script type="text/javascript" src="UserFloor/UserFloor.js"></script>
 				<!--Below is REQUIRED to be below FloorButtons and UserFloor-->
 				<script type="text/javascript" src="CallElevator/CallElevator.js"></script>
