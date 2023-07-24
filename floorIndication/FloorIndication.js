@@ -102,7 +102,7 @@ function floorTraversing(floor){
             //play audio
             tts1.currentTime=0;
             tts1.play();
-            audio1.play();
+            //audio1.play();
             audio2.pause();
             audio2.currentTime=0;
             audio3.pause();
@@ -112,7 +112,7 @@ function floorTraversing(floor){
             //play audio
             tts2.currentTime=0;
             tts2.play();
-            audio2.play();
+            //audio2.play();
             audio1.pause();
             audio1.currentTime=0;
             audio3.pause();
@@ -122,7 +122,7 @@ function floorTraversing(floor){
             //play audio
             tts3.currentTime=0;
             tts3.play();
-            audio3.play();
+            //audio3.play();
             audio1.pause();
             audio1.currentTime=0;
             audio2.pause();
