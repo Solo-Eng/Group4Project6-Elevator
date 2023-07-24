@@ -11,6 +11,7 @@ function loop(){
     looper = false;
     console.log('looping stopped');
     clearInterval(set);
+    Sabbath.style.backgroundColor = '#e6e6e6'
     set = 0;
   } else {
       looper = true;
