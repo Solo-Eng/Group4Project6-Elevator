@@ -1,0 +1,26 @@
+[
+    {
+        "fname": "Ben",
+        "lname": "Allen",
+        "email": "ballen3456@conestogac.on.ca",
+        "uname": "ballen3456",
+        "pword": "passBen",
+        "aboutYou": "I am a student in Conestoga's ESE program - 3rd year"
+    },
+	{
+        "fname": "Nick",
+        "lname": "Raghunath",
+        "email": "nraghunath9271@conestogac.on.ca",
+        "uname": "nick9271",
+        "pword": "Nick1",
+        "aboutYou": "I am a student in Conestoga's ESE program - 3rd year"
+    },
+	{
+        "fname": "ese",
+        "lname": "ese",
+        "email": "ese",
+        "uname": "ese",
+        "pword": "ese",
+        "aboutYou": "ese"
+    }
+]
