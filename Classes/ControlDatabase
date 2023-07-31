@@ -8,60 +8,79 @@
         public $currentFloor;
         public $distance;
 
-        function getDateTime(){
+        private function getDateTime(){
             // Grab the current date and time
             date_default_timezone_set('America/New_York');
             $this->dateTime[0] = date('Y-m-d');
             $this->dateTime[1] = date('H:i:s');
         }
 
-        function updateData(int $node_ID, int $new_status, int $currentFloor, int $requestedFloor){
+        public function updateData(int $node_ID, int $new_status, int $currentFloor, int $requestedFloor){
             
-            getDateTime();
-
-            $db = new PDO(
-                'mysql:host=127.0.0.1;dbname=elevator',
-                'ese',
-                'ese'
-            );
-
-            $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
-
-            // Transaction
-            $db->beginTransaction();
             try {
-                $query = 'UPDATE elevatorNetwork
-                    SET status = :stat,
-                    date = :this->dateTime[0],
-                    time = :this->dateTime[0],
-                    currentFloor = :currentFloor,
-                    requestedFloor = :requestedFloor
-                    WHERE nodeID = :id';
-
-                $statement = $db->prepare($query);
-                $statement->bindValue('stat',$new_status);
-                $statement->bindValue('date1',$date1);
-                $statement->bindValue('time1',$time1);
-                $statement->bindValue('currentFloor',$currentFloor);
-                $statement->bindValue('requestedFloor',$requestedFloor);
-                $statement->bindValue('id', $node_ID);
-                $statement->execute();
-
-                // Return # of updated rows
-                $count = $statement->rowCount();
-                if($count == 0){
-                    throw new Exception('Error - Database unchanged !!!');
+                if ($node_ID < 0){
+                    throw new Exception('node_ID must be positive');
                 }
-                echo "<br/><br/>Database updated<br/><br/>";
-                $db->commit();
+                else if($new_status < 0){
+                    throw new Exception('status must be positive');
+                }
+                else if($currentFloor < 1 || $currentFloor > 3){
+                    throw new Exception('current floor must be between 1 and 3');
+                }
+                else if($requestedFloor < 1 || $requestedFloor > 3){
+                    throw new Exception('requested floor must be between 1 and 3');
+                }
+                else{
+                    getDateTime();
+
+                    $db = new PDO(
+                        'mysql:host=127.0.0.1;dbname=elevator',
+                        'ese',
+                        'ese'
+                    );
+
+                    $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+
+                    // Transaction
+                    $db->beginTransaction();
+                    try {
+                        $query = 'UPDATE elevatorNetwork
+                            SET status = :stat,
+                            date = :this->dateTime[0],
+                            time = :this->dateTime[0],
+                            currentFloor = :currentFloor,
+                            requestedFloor = :requestedFloor
+                            WHERE nodeID = :id';
+
+                        $statement = $db->prepare($query);
+                        $statement->bindValue('stat',$new_status);
+                        $statement->bindValue('date1',$date1);
+                        $statement->bindValue('time1',$time1);
+                        $statement->bindValue('currentFloor',$currentFloor);
+                        $statement->bindValue('requestedFloor',$requestedFloor);
+                        $statement->bindValue('id', $node_ID);
+                        $statement->execute();
+
+                        // Return # of updated rows
+                        $count = $statement->rowCount();
+                        if($count == 0){
+                            throw new Exception('Error - Database unchanged !!!');
+                        }
+                        echo "<br/><br/>Database updated<br/><br/>";
+                        $db->commit();
+                    }
+                    catch (Exception $e) {
+                        echo $e->getMessage();
+                        $db->rollBack();
+                    }
+                }
             }
             catch (Exception $e) {
-                echo $e->getMessage();
-                $db->rollBack();
+                echo e->getMessage();
             }
         }
 
-        function getData(){
+        public function getData(){
             $db = new PDO(
                 'mysql:host=127.0.0.1;dbname=elevator',
                 'ese',
